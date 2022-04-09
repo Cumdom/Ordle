@@ -1,0 +1,39 @@
+#hell{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    user-select: none;
+}
+div{
+    flex-shrink: 0;
+}
+
+.wordContainer{
+    display: flex;
+    height: 300px;
+    width: 200px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.wordRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.wordColumn{
+    width: 50px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.letterCellRight{
+    background-color: greenyellow;
+}
+.letterCellWrong{
+    background-color: gray;
+}
+.letterCellPresence{
+    background-color: gold;
+}
