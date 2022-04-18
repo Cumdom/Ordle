@@ -1,9 +1,13 @@
 function yggdrasil(){
     bootGame()
-    generateKeyboard()
 }
 yggdrasil()
 
+
+
+
+
+// TODO: add dark mode // document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR');
 
 
 // document.cookie = "username=John Doe;";

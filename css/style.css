@@ -1,0 +1,20 @@
+body{
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;    
+}
+div{
+    flex-shrink: 0;
+}
+
+/*
+* COLOUR DEFINITIONS
+*/
+:root {
+    --green:        #adff2f;
+    --yellow:       #ffd700;
+    --darkcell:     #808080;
+    --cellborder:   #000000;
+    --background:   #f8f8f8;
+
+}
+

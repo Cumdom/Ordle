@@ -1,0 +1,44 @@
+#keyboardContainer{
+    width: 1000px;
+    height: 500px;
+}
+.keyboard{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 1%;
+}
+.keyboardKey{
+    background-color: rgb(140, 164, 140);
+    width: 7.5%;
+    height: 33.33%;
+}
+#keyboard-Enter,#keyboard-Backspace{
+    flex-grow: 1;
+}
+
+.keyboardBreak{
+    width: 100%;
+    height: 0%;
+}
+
+.keyboard>div:nth-child(13){
+    margin-left: 3.75%;
+}
+
+.incorrectLetter{
+    
+}
+
+.flip {
+    -moz-transform:    scaleX(-1); /* Gecko */
+    -o-transform:      scaleX(-1); /* Opera */
+    -webkit-transform: scaleX(-1); /* Webkit */
+    transform:         scaleX(-1); /* Standard */
+  
+    filter: FlipH;                 /* IE 6/7/8 */
+  }

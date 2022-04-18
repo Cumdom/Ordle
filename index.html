@@ -3,62 +3,101 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ordle</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/keyboard.css">
+        <link rel="stylesheet" href="./css/wordbox.css">
     </head>
     <body>
-        <div id="container"></div>
-        <div id="wordContainer" class="wordContainer">
-            <div class="wordRow" id="row1">
-                <div class="wordColumn" id="row1col1"></div>
-                <div class="wordColumn" id="row1col2"></div>
-                <div class="wordColumn" id="row1col3"></div>
-                <div class="wordColumn" id="row1col4"></div>
-                <div class="wordColumn" id="row1col5"></div>
+        <div id="container">
+            <div id="wordContainer" class="wordContainer">
+                <div class="wordRow" id="row1">
+                    <div class="letterCell" id="row1col1"></div>
+                    <div class="letterCell" id="row1col2"></div>
+                    <div class="letterCell" id="row1col3"></div>
+                    <div class="letterCell" id="row1col4"></div>
+                    <div class="letterCell" id="row1col5"></div>
+                </div>
+                <div class="wordRow" id="row2">
+                    <div class="letterCell" id="row2col1"></div>
+                    <div class="letterCell" id="row2col2"></div>
+                    <div class="letterCell" id="row2col3"></div>
+                    <div class="letterCell" id="row2col4"></div>
+                    <div class="letterCell" id="row2col5"></div>
+                </div>
+                <div class="wordRow" id="row3">
+                    <div class="letterCell" id="row3col1"></div>
+                    <div class="letterCell" id="row3col2"></div>
+                    <div class="letterCell" id="row3col3"></div>
+                    <div class="letterCell" id="row3col4"></div>
+                    <div class="letterCell" id="row3col5"></div>
+                </div>
+                <div class="wordRow" id="row4">
+                    <div class="letterCell" id="row4col1"></div>
+                    <div class="letterCell" id="row4col2"></div>
+                    <div class="letterCell" id="row4col3"></div>
+                    <div class="letterCell" id="row4col4"></div>
+                    <div class="letterCell" id="row4col5"></div>
+                </div>
+                <div class="wordRow" id="row5">
+                    <div class="letterCell" id="row5col1"></div>
+                    <div class="letterCell" id="row5col2"></div>
+                    <div class="letterCell" id="row5col3"></div>
+                    <div class="letterCell" id="row5col4"></div>
+                    <div class="letterCell" id="row5col5"></div>
+                </div>
+                <div class="wordRow" id="row6">
+                    <div class="letterCell" id="row6col1"></div>
+                    <div class="letterCell" id="row6col2"></div>
+                    <div class="letterCell" id="row6col3"></div>
+                    <div class="letterCell" id="row6col4"></div>
+                    <div class="letterCell" id="row6col5"></div>
+                </div>
             </div>
-            <div class="wordRow" id="row2">
-                <div class="wordColumn" id="row2col1"></div>
-                <div class="wordColumn" id="row2col2"></div>
-                <div class="wordColumn" id="row2col3"></div>
-                <div class="wordColumn" id="row2col4"></div>
-                <div class="wordColumn" id="row2col5"></div>
-            </div>
-            <div class="wordRow" id="row3">
-                <div class="wordColumn" id="row3col1"></div>
-                <div class="wordColumn" id="row3col2"></div>
-                <div class="wordColumn" id="row3col3"></div>
-                <div class="wordColumn" id="row3col4"></div>
-                <div class="wordColumn" id="row3col5"></div>
-            </div>
-            <div class="wordRow" id="row4">
-                <div class="wordColumn" id="row4col1"></div>
-                <div class="wordColumn" id="row4col2"></div>
-                <div class="wordColumn" id="row4col3"></div>
-                <div class="wordColumn" id="row4col4"></div>
-                <div class="wordColumn" id="row4col5"></div>
-            </div>
-            <div class="wordRow" id="row5">
-                <div class="wordColumn" id="row5col1"></div>
-                <div class="wordColumn" id="row5col2"></div>
-                <div class="wordColumn" id="row5col3"></div>
-                <div class="wordColumn" id="row5col4"></div>
-                <div class="wordColumn" id="row5col5"></div>
-            </div>
-            <div class="wordRow" id="row6">
-                <div class="wordColumn" id="row6col1"></div>
-                <div class="wordColumn" id="row6col2"></div>
-                <div class="wordColumn" id="row6col3"></div>
-                <div class="wordColumn" id="row6col4"></div>
-                <div class="wordColumn" id="row6col5"></div>
+            <div id="keyboardContainer">
+                <div id="keyboard" class="keyboard">
+                    <div id="keyboard-q" class="keyboardKey">Q</div>
+                    <div id="keyboard-w" class="keyboardKey">W</div>
+                    <div id="keyboard-e" class="keyboardKey">E</div>
+                    <div id="keyboard-r" class="keyboardKey">R</div>
+                    <div id="keyboard-t" class="keyboardKey">T</div>
+                    <div id="keyboard-y" class="keyboardKey">Y</div>
+                    <div id="keyboard-u" class="keyboardKey">U</div>
+                    <div id="keyboard-i" class="keyboardKey">I</div>
+                    <div id="keyboard-o" class="keyboardKey">O</div>
+                    <div id="keyboard-p" class="keyboardKey">P</div>
+                    <div id="keyboard-å" class="keyboardKey">Å</div>
+                    <div class="keyboardBreak"></div>
+                    <div id="keyboard-a" class="keyboardKey">A</div>
+                    <div id="keyboard-s" class="keyboardKey">S</div>
+                    <div id="keyboard-d" class="keyboardKey">D</div>
+                    <div id="keyboard-f" class="keyboardKey">F</div>
+                    <div id="keyboard-g" class="keyboardKey">G</div>
+                    <div id="keyboard-h" class="keyboardKey">H</div>
+                    <div id="keyboard-j" class="keyboardKey">J</div>
+                    <div id="keyboard-k" class="keyboardKey">K</div>
+                    <div id="keyboard-l" class="keyboardKey">L</div>
+                    <div id="keyboard-ø" class="keyboardKey">Ø</div>
+                    <div id="keyboard-æ" class="keyboardKey">Æ</div>
+                    <div class="keyboardBreak"></div>
+                    <div id="keyboard-Enter" class="keyboardKey">Enter</div>
+                    <div id="keyboard-z" class="keyboardKey">Z</div>
+                    <div id="keyboard-x" class="keyboardKey">X</div>
+                    <div id="keyboard-c" class="keyboardKey">C</div>
+                    <div id="keyboard-v" class="keyboardKey">V</div>
+                    <div id="keyboard-b" class="keyboardKey">B</div>
+                    <div id="keyboard-n" class="keyboardKey">N</div>
+                    <div id="keyboard-m" class="keyboardKey">M</div>
+                    <div id="keyboard-Backspace" class="keyboardKey flip">&#8998;</div>
+                </div>
             </div>
         </div>
 
-        <div id="keyboardContainer"></div>
 
-        <button id="tb">aaaa</button>
+        <button id="tb">&isin;</button>
 
-        <script src="/Javascript/wordlist.js"></script>
-        <script src="/Javascript/gamelogic.js"></script>
-        <script src="/Javascript/keyboard.js"></script>
-        <script src="/Javascript/main.js"></script>
+        <script src="./Javascript/wordlist.js"></script>
+        <script src="./Javascript/gamelogic.js"></script>
+        <script src="./Javascript/keyboard.js"></script>
+        <script src="./Javascript/main.js"></script>
     </body>
 </html>
