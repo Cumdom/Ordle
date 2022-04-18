@@ -4,7 +4,7 @@ let alphabet = [
 ]
 let blankCache;
 
-//resetables
+//resettables
 let dailyWord = [...ordListe[currentDay]];
 let rowContainerArray = [];
 let letterIndex = 0;
@@ -84,7 +84,7 @@ function comparisonPalette(){
         gameOver = true;
         return palette;
     }
-    //Cleans palette of reduntant yellows. full av vonde tanker :)))))))
+    //Cleans palette of redundant yellows. full av vonde tanker :)))))))
     for(i=0;i<5;i++){
         if(palette[i]==2){
             var missedLetterCount = false;
@@ -148,5 +148,3 @@ function bootGame(){
     window.addEventListener('keydown',editRow)
     newRow()
 }
-
-bootGame()
