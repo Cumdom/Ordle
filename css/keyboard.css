@@ -1,4 +1,5 @@
 #keyboardContainer{
+    user-select: none;
     /**    5:2 ratio   */
     width: 100%;
     height: 33.33%;
@@ -7,7 +8,7 @@
     flex-direction: row;
     align-content: center;
     justify-content: flex-start;
-}
+margin-top: 4%;}
 
 .keyboard{
     /* padding: 1%; */
@@ -32,14 +33,34 @@
     /* flex-grow: 1; */
 }
 
+.keyboardKey:active:hover{
+    background-color: var(--litpressed);
+}
+
+.incorrectLetter{
+    background-color: var(--unlit);
+}
+.incorrectLetter:active:hover{
+    background-color: var(--unlitpressed);
+}
+.yellowLetter{
+    background-color: var(--yellow);
+}
+.yellowLetter:active:hover{
+    background-color: var(--yellowpressed);
+}
+.greenLetter{
+    background-color: var(--green);
+}
+.greenLetter>:active:hover{
+    background-color: var(--greenpressed);
+}
 .keyText{
-
     /* *  TEXT FORMATING */
-
-color: var(--text);
-font-weight: 550;
-font-size: var(--kbfontsize);
-text-align: center;
+    color: var(--text);
+    font-weight: 550;
+    font-size: var(--kbfontsize);
+    text-align: center;
 }
 
 #keyboard-Enter,#keyboard-Backspace{
@@ -50,14 +71,7 @@ text-align: center;
     width: 100%;
     height: 0%;
 }
-/* 
-.keyboard>div:nth-child(13){
-    margin-left: 3.75%;
-} */
 
-.incorrectLetter{
-    background-color: var(--unlit);
-}
 
 .backspace {
     font-size: calc(var(--kbfontsize)*2.5);

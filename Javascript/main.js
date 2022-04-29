@@ -1,18 +1,19 @@
 function yggdrasil(){
     bootGame()
+    addKeyboardEventlistener()
 }
 yggdrasil()
 
-var k = [...document.getElementById('keyboard').children]
+// var k = [...document.getElementById('keyboard').children]
 
-k.forEach(x => {
-    var l = x.innerHTML;
-    x.innerHTML = '';
-    var d = document.createElement('div');
-    d.innerHTML = l;
-    d.className = 'keyText';
-    x.appendChild(d);
-});
+// k.forEach(x => {
+//     var l = x.innerHTML;
+//     x.innerHTML = '';
+//     var d = document.createElement('div');
+//     d.innerHTML = l;
+//     d.className = 'keyText';
+//     x.appendChild(d);
+// });
 
 
 

@@ -15,18 +15,44 @@ div{
 :root {
     --kbfontsize: 92%;
     /* *   GENERAL COLOURS      */
-    --background: #eff0f1;
+    --background: #fbfbfb;
     --text: #1F1F1F;
+    --white: #FFFFFF;
     
     /* *   CELL COLOURS         */
-    --green:        #adff2f;
-    --yellow:       #ffd700;
-    --darkcell:     #808080;
-    --cellborder:   #bfbfbf;
+    --green:        #83bc2e;
+    --yellow:       #dfc21c;
+    --darkcell:     #cccccc;
+    --cellborder:   #cccccc;
 
     /* *   KEYBOARD COLOURS     */
-    --lit: #cacacb;
-    --unlit: #3e556e;
+    --lit: #E4E4E8;
+    --unlit: #adadb0;
+    
+    --greenpressed:        hsl(84, 100%, 53%);
+    --yellowpressed:       hsl(51, 100%, 45%);
+    --litpressed: hsl(240, 1%, 71%);
+    --unlitpressed: hsl(211, 14%, 51%);
+}
+:root .nightmode{
+    --background: #2a2a2a;
+    
+    --darkcell:     #464646;
+    --cellborder:   #3f3f3f;
+    --text: #ffffff;
+    --lit: #5b5b5f;
+    --unlit: #3e3e41;
+
+    
+}
+
+:root .norge {
+    /* *   CELL COLOURS         */
+    --green:        #3c4ca3;
+    --yellow:       #FFFFFF;
+    --darkcell:     #ff0000;
+    --cellborder:   #bfbfbf;
+
 }
 
 
@@ -43,11 +69,11 @@ div{
     align-items: center;
     align-content: center;
     justify-content: flex-start;
-}
+background-color: var(--background);}
 #gameContainer{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
     /** ------------------------------ */

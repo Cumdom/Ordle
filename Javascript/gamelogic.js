@@ -4,7 +4,7 @@ let alphabet = [
 ]
 let blankCache;
 
-//resettables
+//* resettables
 let dailyWord = [...ordListe[currentDay]];
 let rowContainerArray = [];
 let letterIndex = 0;
@@ -52,7 +52,9 @@ function addLetter(letter){
 
 function commitRow(){
     if(checkRow()){
+
         paintRow(comparisonPalette());
+        keyboardPainter()
         if(gameOver){
             // document.removeEventListener('keydown',editRow);
             return
@@ -74,10 +76,14 @@ function comparisonPalette(){
         if (dailyWord.includes(currentLetter)){
             if(dailyWord[i]==currentLetter){
                 palette[i] = 1;
+                greenLetters.push(currentLetter)
                 correctCount++
             }else{
                 palette[i] = 2;
+                yellowLetters.push(currentLetter)
             }
+        } else{
+            grayLetters.push(currentLetter);
         }
     }
     if(correctCount==5){
@@ -98,6 +104,7 @@ function comparisonPalette(){
             }
         }
     }
+
     return palette;
 }
 

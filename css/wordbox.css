@@ -4,8 +4,8 @@
     width: 94.6%;
     flex-direction: column;
     padding-bottom: 3%;
-    gap: 1.5%;
-}
+    gap: 2%;
+margin-bottom: 19%;}
 
 .wordRow{
     width: 100%;
@@ -28,12 +28,18 @@
 
 .letterCellRight{
     background-color: var(--green);
+    border-color: transparent;
+    color: var(--white);
 }
 .letterCellWrong{
     background-color: var(--darkcell);
+    border-color: transparent;
+    color: var(--white);
 }
 .letterCellPresence{
     background-color: var(--yellow);
+    border-color: transparent;
+    color: var(--white);
 }
 
 
