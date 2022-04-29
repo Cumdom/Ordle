@@ -137,7 +137,7 @@ function deleteLetter(){
 function updateDivCell(){
     var cellID = 'row' + (rowIndex+1) + 'col' + (letterIndex+1);
     var cell = document.getElementById(cellID);
-    cell.innerHTML = rowContainerArray[rowIndex][letterIndex].toUpperCase();
+    cell.innerHTML = '<div>'+rowContainerArray[rowIndex][letterIndex].toUpperCase()+'</div>';
 }
 
 function bootGame(){

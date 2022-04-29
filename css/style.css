@@ -69,7 +69,8 @@ div{
     align-items: center;
     align-content: center;
     justify-content: flex-start;
-background-color: var(--background);}
+    background-color: var(--background);
+}
 #gameContainer{
     display: flex;
     flex-direction: column;
@@ -77,6 +78,8 @@ background-color: var(--background);}
     align-items: center;
 
     /** ------------------------------ */
+    min-width: 200px;
+    min-height: 400px;
     width: 45vh;
     height: 90vh;
     margin-top: 10vh;

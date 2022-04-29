@@ -1,30 +1,32 @@
 .wordContainer{
     display: flex;
     height: 43.75%;
-    width: 94.6%;
+    width: 96.6%;
     flex-direction: column;
     padding-bottom: 3%;
-    gap: 2%;
-margin-bottom: 19%;}
+    gap: 2.2%;
+margin-bottom: 21%;}
 
 .wordRow{
-    width: 100%;
+    width: 105%;
     /* flex-grow: 1; */
     height: 20%;
     display: flex;
     flex-direction: row;
-    gap: 1%;
+    gap: 1.2%;
 }
 
 .letterCell{
-    width: 17.79%;
-    height: 96.16%;
+    width: 16.79%;
+    height: 97.33333%;
     border: 2px solid var(--cellborder);
     color: var(--text);
     font-weight: 550;
-    font-size: var(--kbfontsize);
+    font-size: calc(var(--kbfontsize)*2);
     text-align: center;
-}
+
+    display: flex;
+flex-direction: column;justify-content: center;}
 
 .letterCellRight{
     background-color: var(--green);
