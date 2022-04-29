@@ -4,7 +4,7 @@
     width: 94.6%;
     flex-direction: column;
     padding-bottom: 3%;
-    gap: 4%;
+    gap: 1.5%;
 }
 
 .wordRow{
@@ -17,9 +17,13 @@
 }
 
 .letterCell{
-    width: 18.5%;
-    height: 100%;
-    border: 1px solid var(--cellborder);
+    width: 17.79%;
+    height: 96.16%;
+    border: 2px solid var(--cellborder);
+    color: var(--text);
+    font-weight: 550;
+    font-size: var(--kbfontsize);
+    text-align: center;
 }
 
 .letterCellRight{

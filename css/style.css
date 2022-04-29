@@ -13,19 +13,20 @@ div{
 * COLOUR DEFINITIONS
 */
 :root {
+    --kbfontsize: 92%;
     /* *   GENERAL COLOURS      */
-    --background:   #f8f8f8;
-    --text:         #000000;
+    --background: #eff0f1;
+    --text: #1F1F1F;
     
     /* *   CELL COLOURS         */
     --green:        #adff2f;
     --yellow:       #ffd700;
     --darkcell:     #808080;
-    --cellborder: #bfbfbf;
+    --cellborder:   #bfbfbf;
 
     /* *   KEYBOARD COLOURS     */
-    --lit:          #b1bfac;
-    --unlit:        #4b6e3e;
+    --lit: #cacacb;
+    --unlit: #3e556e;
 }
 
 
