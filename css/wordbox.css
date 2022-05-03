@@ -1,15 +1,15 @@
 .wordContainer{
     display: flex;
     height: 43.75%;
-    width: 96.6%;
+    width: 98.6%;
     flex-direction: column;
     padding-bottom: 3%;
-    gap: 2.2%;
-    margin-bottom: 21%;
-}
+    gap: 3.2%;
+    margin-bottom: 27%;
+left: -0.7vh;position: relative;}
 
 .wordRow{
-    width: 105%;
+    width: 108.8%;
     /* flex-grow: 1; */
     height: 20%;
     display: flex;
@@ -19,8 +19,8 @@
 
 .letterCell{
     width: 16.79%;
-    height: 97.33333%;
-    border: 2px solid var(--cellborder);
+    height: 102%;
+    border: 0.3vh solid var(--cellborder);
     color: var(--text);
     font-weight: 550;
     font-size: calc(var(--kbfontsize)*2);

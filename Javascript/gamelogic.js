@@ -148,6 +148,10 @@ function bootGame(){
         letterIndex = 0;
         rowIndex = 0;
         gameOver = false;
+
+        grayLetters = [];
+        yellowLetters = [];
+        greenLetters = [];
     }
 
     blankCache = gameContainer.innerHTML;
