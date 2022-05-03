@@ -1,0 +1,31 @@
+#header{
+    color:var(--text);
+    display: flex;
+    border-bottom: 1px solid var(--headerborder);
+    height: 8vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#gameLogo{
+    font-family: KarnakPro-CondesedBlack;
+    font-size: var(--headerfontsize);
+/* flex-grow: 1; */}
+
+#menuLeft{
+    height: 10px;
+    width: 10px;
+    /* background-color: blue; */
+flex-grow: 1;}
+#menuRight{
+    display: flex;height: 10px;
+    width: 10px;
+    /* background-color: blue; */
+flex-grow: 1;flex-direction: row-reverse;justify-content: space-between;align-content: flex-start;align-items: center;}
+
+#menuRightButton{
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+}

@@ -141,16 +141,17 @@ function updateDivCell(){
 }
 
 function bootGame(){
-    var wordContainer = document.getElementById('wordContainer');
+    var gameContainer = document.getElementById('gameContainer');
     if(blankCache!=undefined){
-        wordContainer.innerHTML = blankCache;
-        dailyWord = [...ordListe[currentDay]];
+        gameContainer.innerHTML = blankCache;
+        dailyWord = [...ordListe[currentDay+currentDay+100+(Math.floor(Math.random()*1000))]];
         rowContainerArray = [];
         letterIndex = 0;
         rowIndex = 0;
         gameOver = false;
     }
-    blankCache = wordContainer.innerHTML;
+
+    blankCache = gameContainer.innerHTML;
 
     window.addEventListener('keydown',editRow)
     newRow()
