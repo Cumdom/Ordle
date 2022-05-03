@@ -1,7 +1,6 @@
 function yggdrasil(){
     cookie.monster()
     bootGame()
-    addKeyboardEventlistener()
 }
 yggdrasil()
 
