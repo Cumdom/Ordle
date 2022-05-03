@@ -159,4 +159,5 @@ function bootGame(){
     window.addEventListener('keydown',editRow)
     newRow()
     addKeyboardEventlistener()
+    ordbøkeneLinker()
 }

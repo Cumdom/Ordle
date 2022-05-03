@@ -30,7 +30,7 @@ flex-grow: 1;}
     align-items: center;
 }
 
-#menuRightButton{
+#menuRightButton,#menuLeftButton{
     height: 20px;
     width: 20px;
     background-color: blue;

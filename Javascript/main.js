@@ -1,6 +1,7 @@
 function yggdrasil(){
     cookie.monster()
     bootGame()
+    
 }
 yggdrasil()
 
