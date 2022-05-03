@@ -10,11 +10,18 @@ div{
 * COLOUR DEFINITIONS
 */
 :root {
+    /** GENERAL COLOURS  */
+    --background:   #f8f8f8;
+    
+    /** GAME COLOURS  */
     --green:        #adff2f;
     --yellow:       #ffd700;
     --darkcell:     #808080;
     --cellborder:   #000000;
-    --background:   #f8f8f8;
+    
+    /** KEYBOARD COLOURS  */
+    --keylit:gray;
+    --keyunlit:rgb(87, 87, 87);
 
 }
 

@@ -70,7 +70,6 @@ function comparisonPalette(){
     //Assembles palette
     for (i=0;i<5;i++){
         var currentLetter = currentRow[i][0];
-
         if (dailyWord.includes(currentLetter)){
             if(dailyWord[i]==currentLetter){
                 palette[i] = 1;
