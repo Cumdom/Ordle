@@ -1,27 +1,106 @@
 body{
     background-color: var(--background);
-    font-family: Arial, Helvetica, sans-serif;    
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;  
 }
 div{
     flex-shrink: 0;
 }
-
+/* 
+* FONT
+*/
+@font-face {
+    font-family: KarnakPro-CondesedBlack;
+    src: url(../KarnakPro-CondensedBlack.otf);
+}
 /*
 * COLOUR DEFINITIONS
 */
 :root {
-    /** GENERAL COLOURS  */
-    --background:   #f8f8f8;
-    
-    /** GAME COLOURS  */
-    --green:        #adff2f;
-    --yellow:       #ffd700;
-    --darkcell:     #808080;
-    --cellborder:   #000000;
-    
-    /** KEYBOARD COLOURS  */
-    --keylit:gray;
-    --keyunlit:rgb(87, 87, 87);
+    --kbfontsize: 84%;
+    --headerfontsize: 219%;
+    /* *   GENERAL COLOURS      */
+    --background: #fbfbfb;
+    --text: #1F1F1F;
+    --white: #FFFFFF;
 
+    --headerborder: #000000;
+    
+    /* *   CELL COLOURS         */
+    --green:        #83bc2e;
+    --yellow:       #dfc21c;
+    --darkcell:     #cccccc;
+    --cellborder:   #cccccc;
+
+    /* *   KEYBOARD COLOURS     */
+    --lit: #E4E4E8;
+    --unlit: #adadb0;
+    
+    --greenpressed:        hsl(84, 100%, 53%);
+    --yellowpressed:       hsl(51, 100%, 45%);
+    --litpressed: hsl(240, 1%, 71%);
+    --unlitpressed: hsl(211, 14%, 51%);
+}
+:root .nightmode{
+    --background: #2a2a2a;
+    
+    --darkcell:     #464646;
+    --cellborder:   #3f3f3f;
+    --text: #ffffff;
+    --lit: #5b5b5f;
+    --unlit: #3e3e41;
+    --headerborder: #3e3e41 ;
+
+    
 }
 
+:root .norge {
+    /* *   CELL COLOURS         */
+    --text:#00205B;
+    --green:        #00205B;
+    --yellow:       #FFFFFF;
+    --darkcell:     #BA0C2F;
+    --cellborder:   #bfbfbf;
+    --unlit:        #BA0C2F;
+    --headerborder:   #00205B;
+}
+:root .norge .letterCellPresence{
+    --white: #00205B;
+}
+
+:root .norge .greenLetter, .incorrectLetter{
+    --text:#ffffff;
+}
+
+
+
+
+/*
+* GENERAL STYLING
+*/
+#container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    background-color: var(--background);
+    overflow: hidden;
+}
+#gameContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    /** ------------------------------ */
+    min-width: 200px;
+    min-height: 400px;
+    width: 45vh;
+    height: 90vh;
+    margin-top: 4vh;
+}

@@ -4,7 +4,7 @@ let alphabet = [
 ]
 let blankCache;
 
-//resettables
+//* resettables
 let dailyWord = [...ordListe[currentDay]];
 let rowContainerArray = [];
 let letterIndex = 0;
@@ -52,7 +52,9 @@ function addLetter(letter){
 
 function commitRow(){
     if(checkRow()){
+
         paintRow(comparisonPalette());
+        keyboardPainter()
         if(gameOver){
             // document.removeEventListener('keydown',editRow);
             return
@@ -73,10 +75,14 @@ function comparisonPalette(){
         if (dailyWord.includes(currentLetter)){
             if(dailyWord[i]==currentLetter){
                 palette[i] = 1;
+                greenLetters.push(currentLetter)
                 correctCount++
             }else{
                 palette[i] = 2;
+                yellowLetters.push(currentLetter)
             }
+        } else{
+            grayLetters.push(currentLetter);
         }
     }
     if(correctCount==5){
@@ -97,6 +103,7 @@ function comparisonPalette(){
             }
         }
     }
+
     return palette;
 }
 
@@ -129,20 +136,21 @@ function deleteLetter(){
 function updateDivCell(){
     var cellID = 'row' + (rowIndex+1) + 'col' + (letterIndex+1);
     var cell = document.getElementById(cellID);
-    cell.innerHTML = rowContainerArray[rowIndex][letterIndex].toUpperCase();
+    cell.innerHTML = '<div>'+rowContainerArray[rowIndex][letterIndex].toUpperCase()+'</div>';
 }
 
 function bootGame(){
-    var wordContainer = document.getElementById('wordContainer');
+    var gameContainer = document.getElementById('gameContainer');
     if(blankCache!=undefined){
-        wordContainer.innerHTML = blankCache;
-        dailyWord = [...ordListe[currentDay]];
+        gameContainer.innerHTML = blankCache;
+        dailyWord = [...ordListe[currentDay+currentDay+100+(Math.floor(Math.random()*1000))]];
         rowContainerArray = [];
         letterIndex = 0;
         rowIndex = 0;
         gameOver = false;
     }
-    blankCache = wordContainer.innerHTML;
+
+    blankCache = gameContainer.innerHTML;
 
     window.addEventListener('keydown',editRow)
     newRow()
