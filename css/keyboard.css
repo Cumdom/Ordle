@@ -1,5 +1,11 @@
 #keyboardContainer{
-    user-select: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
     /**    5:2 ratio   */
     width: 128%;
     max-width: 98vw;height: 39%;
@@ -8,7 +14,8 @@
     flex-direction: row;
     align-content: center;
     justify-content: flex-start;
-/* margin-top: 4%; */overflow: hidden;}
+    /* margin-top: 4%; */
+    overflow: hidden;}
 
 .keyboard{
     /* padding: 1%; */
