@@ -1,7 +1,7 @@
 #keyboardContainer{
     user-select: none;
     /**    5:2 ratio   */
-    width: 124%;
+    width: 128%;
     max-width: 98vw;height: 40%;
     /* margin-bottom: 6%; */
     display: flex;
@@ -33,28 +33,28 @@
     /* flex-grow: 1; */
 }
 
-.keyboardKey:active:hover{
-    background-color: var(--litpressed);
-}
 
 .incorrectLetter{
     background-color: var(--unlit);
 }
-.incorrectLetter:active:hover{
-    background-color: var(--unlitpressed);
-}
 .yellowLetter{
     background-color: var(--yellow);
-}
-.yellowLetter:active:hover{
-    background-color: var(--yellowpressed);
 }
 .greenLetter{
     background-color: var(--green);
 }
+/* .keyboardKey:active:hover{
+    background-color: var(--litpressed);
+}
+.incorrectLetter:active:hover{
+    background-color: var(--unlitpressed);
+}
+.yellowLetter:active:hover{
+    background-color: var(--yellowpressed);
+}
 .greenLetter>:active:hover{
     background-color: var(--greenpressed);
-}
+} */
 .keyText{
     /* *  TEXT FORMATING */
     color: var(--text);
