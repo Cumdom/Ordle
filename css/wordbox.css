@@ -27,7 +27,7 @@
 .letterCell {
     width: 16.79%;
     height: 102%;
-    border: 0.3vh solid var(--cellborder);
+    border: var(--cellborderwidth) solid var(--cellborder);
     color: var(--text);
     font-weight: 550;
     font-size: calc(var(--kbfontsize) * 2);
