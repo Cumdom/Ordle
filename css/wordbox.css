@@ -2,7 +2,7 @@
     display: flex;
     height: 43.75%;
     width: 98.6%;
-    flex-direction: column;
+    max-width: 90vw;flex-direction: column;
     padding-bottom: 3%;
     gap: 3.2%;
     /* margin-bottom: 30%; */
