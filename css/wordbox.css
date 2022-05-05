@@ -5,8 +5,8 @@
     flex-direction: column;
     padding-bottom: 3%;
     gap: 3.2%;
-    margin-bottom: 30%;
-left: -0.7vh;position: relative;}
+    /* margin-bottom: 30%; */
+left: -0.75vh;position: relative;}
 
 .wordRow{
     width: 108.8%;
