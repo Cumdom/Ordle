@@ -24,13 +24,16 @@
 .keyboardKey{
     border-radius: 0.5vh;
     background-color: var(--lit);
-    width: 7.729%;
+    width: 7.7275%;
     height: 30%;
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
     /* flex-grow: 1; */
+}
+.keyboardKey:hover{
+    cursor: pointer;
 }
 
 
@@ -65,6 +68,9 @@
 
 #keyboard-Enter,#keyboard-Backspace{
     flex-grow: 36;
+}
+#keyboard-Backspace .keytext{
+    font-weight: normal;
 }
 
 .keyboardBreak{

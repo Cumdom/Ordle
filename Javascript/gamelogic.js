@@ -46,6 +46,7 @@ function addLetter(letter){
     if(letterIndex<5){
         rowContainerArray[rowIndex][letterIndex] = letter;
         updateDivCell()
+        animator.popInStart()
         letterIndex++;
     }
 }
@@ -136,7 +137,13 @@ function deleteLetter(){
 function updateDivCell(){
     var cellID = 'row' + (rowIndex+1) + 'col' + (letterIndex+1);
     var cell = document.getElementById(cellID);
-    cell.innerHTML = '<div>'+rowContainerArray[rowIndex][letterIndex].toUpperCase()+'</div>';
+    var letter = rowContainerArray[rowIndex][letterIndex].toUpperCase()
+    cell.innerHTML = '<div>' + letter + '</div>';
+    if(letter ==''){
+        cell.className = cell.className.replace(' letterCellFilled','')
+    } else{
+        cell.className += ' letterCellFilled';
+    }
 }
 
 function bootGame(){

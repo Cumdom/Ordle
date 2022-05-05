@@ -1,14 +1,21 @@
-.wordContainer{
+.wordContainer {
     display: flex;
     height: 43.75%;
     width: 98.6%;
-    max-width: 90vw;flex-direction: column;
+    max-width: 90vw;
+    flex-direction: column;
     padding-bottom: 3%;
     gap: 3.2%;
     /* margin-bottom: 30%; */
-left: -0.75vh;position: relative;}
+    left: -0.75vh;
+    position: relative;
+}
 
-.wordRow{
+.wordContainer div {
+    user-select: none;
+}
+
+.wordRow {
     width: 108.8%;
     /* flex-grow: 1; */
     height: 20%;
@@ -17,32 +24,34 @@ left: -0.75vh;position: relative;}
     gap: 1.2%;
 }
 
-.letterCell{
+.letterCell {
     width: 16.79%;
     height: 102%;
     border: 0.3vh solid var(--cellborder);
     color: var(--text);
     font-weight: 550;
-    font-size: calc(var(--kbfontsize)*2);
+    font-size: calc(var(--kbfontsize) * 2);
     text-align: center;
-
     display: flex;
-flex-direction: column;justify-content: center;}
+    flex-direction: column;
+    justify-content: center;
+}
+.letterCellFilled{
+    border-color: var(--cellborderfilled);
+}
 
-.letterCellRight{
+.letterCellRight {
     background-color: var(--green);
     border-color: transparent;
     color: var(--white);
 }
-.letterCellWrong{
+.letterCellWrong {
     background-color: var(--darkcell);
     border-color: transparent;
     color: var(--white);
 }
-.letterCellPresence{
+.letterCellPresence {
     background-color: var(--yellow);
     border-color: transparent;
     color: var(--white);
 }
-
-
