@@ -3,7 +3,8 @@ let viewScaling = {}
 viewScaling.resizeEventListener = _=>{
     var kbfontsize = (document.getElementById('container').clientHeight/50) + 'px';
     document.documentElement.style.setProperty('--kbfontsize', kbfontsize);
-    console.log('-------------------------','resized','-------------------------')
+    // document.do
+
 }
 viewScaling.handler = _=>{
     viewScaling.resizeEventListener()

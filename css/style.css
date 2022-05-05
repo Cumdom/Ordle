@@ -23,6 +23,7 @@ font-face {
 * COLOUR DEFINITIONS
 */
 :root {
+    --containersize: 100%;
     --kbfontsize: 100%;
     /* *   GENERAL COLOURS      */
     --background: #fbfbfb;
@@ -86,7 +87,7 @@ font-face {
 */
 #container{
     width: 100%;
-    height: 90vh;
+    height: var(--containersize);
     display: flex;
     flex-direction: column;
     align-items: center;
