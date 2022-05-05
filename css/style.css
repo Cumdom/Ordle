@@ -97,9 +97,9 @@ font-face {
     background-color: var(--background);
 }
 
-html{
+/* html{
 overflow: hidden;
-}
+} */
 
 #gameContainer{
     display: flex;
