@@ -2,7 +2,7 @@
     user-select: none;
     /**    5:2 ratio   */
     width: 128%;
-    max-width: 98vw;height: 40%;
+    max-width: 98vw;height: 39%;
     /* margin-bottom: 6%; */
     display: flex;
     flex-direction: row;
@@ -19,12 +19,12 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    gap: 1%;
+    gap: 1.5%;
 }
 .keyboardKey{
     border-radius: 0.5vh;
     background-color: var(--lit);
-    width: 8.18%;
+    width: 7.729%;
     height: 30%;
     display: flex;
     align-content: center;
