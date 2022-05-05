@@ -8,7 +8,7 @@ animator.popInStart = _=>{
 };
 
 animator.popInTransform = (cellID,popInIntervalID)=>{
-    var scaleValue = animator.scaleValueExtractor(cellID) - 0.01;
+    var scaleValue = animator.scaleValueExtractor(cellID) - 0.02;
     document.getElementById(cellID).style.transform = 'scale( ' + (scaleValue) + ' )';
     
     if(scaleValue<=1){
