@@ -4,6 +4,7 @@ body{
     margin: 0;
     padding: 0;
     border: 0; 
+    min-height: 100vh;
 }
 div{
     flex-shrink: 0;
@@ -24,7 +25,7 @@ font-face {
 */
 :root {
     --containersize: 100%;
-    --kbfontsize: 100%;
+    --kbfontsize: 0;
     --cellborderwidth: calc(var(--kbfontsize)*50*3/1000); 
     /* *   GENERAL COLOURS      */
     --background: #fbfbfb;
