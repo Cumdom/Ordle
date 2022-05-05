@@ -1,7 +1,7 @@
 function yggdrasil(){
     cookie.monster()
     bootGame()
-    
+    viewScaling.handler()
 }
 yggdrasil()
 

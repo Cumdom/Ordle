@@ -2,7 +2,7 @@
     color:var(--text);
     display: flex;
     border-bottom: 1px solid var(--headerborder);
-    height: 8vh;
+    height: 7vh;
     width: 100%;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +10,7 @@
 
 #gameLogo{
     font-family: KarnakPro-CondesedBlack;
-    font-size: var(--headerfontsize);
+    font-size: calc(var(--kbfontsize)*2.8);
     /* flex-grow: 1; */
 }
 
