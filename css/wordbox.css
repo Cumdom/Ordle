@@ -9,6 +9,7 @@
     /* margin-bottom: 30%; */
     left: calc(var(--kbfontsize)*50* -120 /10000);
     position: relative;
+    transform: scaleY(1);
 }
 
 .wordContainer div {
