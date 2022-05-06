@@ -1,6 +1,8 @@
 let animator = {};
-animator.flipSpeed = 2.33;
-animator.popInSpeed = 1;
+animator.flipSpeed      = 1/(intervalSpeed/10) * 2.33;
+animator.popInSpeed     = 1/(intervalSpeed/10) * 1;
+animator.intervalSpeed  = 20
+
 animator.popInStart = _=>{
     var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(letterIndex+1));
     letterCell.style.transform = 'scale( ' + 1.1 + ' )';
