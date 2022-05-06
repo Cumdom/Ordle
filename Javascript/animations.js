@@ -1,12 +1,9 @@
 let animator = {};
-animator.flipSpeed      = 1/(intervalSpeed/10) * 2.33;
-animator.popInSpeed     = 1/(intervalSpeed/10) * 1;
-animator.intervalSpeed  = 20
 
 animator.popInStart = _=>{
     var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(letterIndex+1));
     letterCell.style.transform = 'scale( ' + 1.1 + ' )';
-    var popInIntervalID = setInterval(_=>animator.popInTransform(letterCell,popInIntervalID),10)
+    var popInIntervalID = setInterval(_=>animator.popInTransform(letterCell,popInIntervalID),animator.intervalSpeed)
 };
 
 animator.popInTransform = (letterCell,popInIntervalID)=>{
@@ -35,7 +32,7 @@ animator.flipStart = colourPalette=>{
     letterCell.style.transform = 'scaleY( ' + 1 + ' )';
     var flipIntervalID = setInterval(_=>{
         animator.flipStartTransform(letterCell,flipIntervalID,colourPalette)
-    },10)
+    },animator.intervalSpeed)
 }
 
 animator.flipStartTransform = (letterCell,flipIntervalID,colourPalette)=>{
@@ -73,3 +70,8 @@ animator.flipEndTransform =(letterCell,flipIntervalID,colourPalette)=>{
         }
     };
 }
+
+animator.flipping       = false
+animator.intervalSpeed  = 16.667
+animator.flipSpeed      = (animator.intervalSpeed/10) * 2.33;
+animator.popInSpeed     = (animator.intervalSpeed/10) * 1;

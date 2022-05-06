@@ -32,7 +32,6 @@ function editRow(e){
         var keyInput = e.key;
         if(alphabet.includes(keyInput.toLowerCase())){
             addLetter(keyInput.toLowerCase())
-            
         } else if(keyInput == 'Backspace'){
             deleteLetter()
             
