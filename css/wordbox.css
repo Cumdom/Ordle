@@ -43,6 +43,7 @@
     flex-direction: column;
     justify-content: center;
     user-select: none;
+    position: relative;
 }
 .letterCellFilled{
     border-color: var(--cellborderfilled);

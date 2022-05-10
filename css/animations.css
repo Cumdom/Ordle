@@ -1,0 +1,14 @@
+@keyframes popIn {
+    from {transform: scale(1.1);}
+    to {transform: scale(1);}
+}
+
+@keyframes flipStart {
+    0% {transform: scaleY(1);}
+    50%{transform: scaleY(0);}
+    100%{transform: scaleY(1);}
+}
+div{
+    animation-timing-function:linear;
+}
+

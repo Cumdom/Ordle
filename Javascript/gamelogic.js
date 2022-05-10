@@ -45,7 +45,7 @@ function addLetter(letter){
     if(letterIndex<5){
         rowContainerArray[rowIndex][letterIndex] = letter;
         updateDivCell()
-        animator.popInStart()
+        animator.popIn()
         letterIndex++;
     }
 }
@@ -55,7 +55,9 @@ function addLetter(letter){
 function commitRow(){
     if(checkRow()){
         letterIndex = 0
-        animator.flipStart(comparisonPalette())
+        animator.flip(comparisonPalette())
+        // animator.flipStart(comparisonPalette())
+
     }
 }
 
@@ -131,8 +133,9 @@ function comparisonPalette(){
 //     }
 // }
 
-function paintRow(palette){
-    var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(letterIndex+1));
+function paintRow(palette, letterCell){
+    // var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(letterIndex+1));
+    console.log(palette)
     switch (palette[letterIndex]) {
         case 0:
             letterCell.className += ' letterCellWrong';
