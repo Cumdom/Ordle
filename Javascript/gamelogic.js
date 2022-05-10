@@ -27,12 +27,11 @@ function newRow(){
 }
 
 function editRow(e){
-    if(!gameOver){
+    if(!gameOver&&!animator.flipping){
         var activeRow = rowContainerArray[rowIndex];
         var keyInput = e.key;
         if(alphabet.includes(keyInput.toLowerCase())){
             addLetter(keyInput.toLowerCase())
-            
         } else if(keyInput == 'Backspace'){
             deleteLetter()
             
@@ -46,24 +45,31 @@ function addLetter(letter){
     if(letterIndex<5){
         rowContainerArray[rowIndex][letterIndex] = letter;
         updateDivCell()
+        animator.popInStart()
         letterIndex++;
     }
 }
 
+//! heavely integrated with animator.flip[...],  
+
 function commitRow(){
     if(checkRow()){
-
-        paintRow(comparisonPalette());
-        keyboardPainter()
-        if(gameOver){
-            // document.removeEventListener('keydown',editRow);
-            return
-        }
-        newRow();
-        rowIndex++;
-        letterIndex=0;
+        letterIndex = 0
+        animator.flipStart(comparisonPalette())
     }
 }
+
+function commitRowContinuator(){
+    keyboardPainter()
+    if(gameOver){
+        // document.removeEventListener('keydown',editRow);
+        return
+    }
+    newRow();
+    rowIndex++;
+    letterIndex=0;
+}
+
 
 function comparisonPalette(){
     var currentRow = rowContainerArray[rowIndex];
@@ -108,22 +114,38 @@ function comparisonPalette(){
 }
 
 
-function paintRow(x){
-    for (i=0;i<5;i++) {
-        var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(i+1));
-        switch (x[i]) {
-            case 0:
-                letterCell.className += ' letterCellWrong';
-            break;
-            case 1:
-                letterCell.className += ' letterCellRight';
-            break;
-            case 2:
-                letterCell.className += ' letterCellPresence';
-            break;
-        }
+// function paintRow(palette){
+//     for (i=0;i<5;i++) {
+//         var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(i+1));
+//         switch (palette[i]) {
+//             case 0:
+//                 letterCell.className += ' letterCellWrong';
+//             break;
+//             case 1:
+//                 letterCell.className += ' letterCellRight';
+//             break;
+//             case 2:
+//                 letterCell.className += ' letterCellPresence';
+//             break;
+//         }
+//     }
+// }
+
+function paintRow(palette){
+    var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(letterIndex+1));
+    switch (palette[letterIndex]) {
+        case 0:
+            letterCell.className += ' letterCellWrong';
+        break;
+        case 1:
+            letterCell.className += ' letterCellRight';
+        break;
+        case 2:
+            letterCell.className += ' letterCellPresence';
+        break;
     }
 }
+
 
 function deleteLetter(){
     if(letterIndex>0){
@@ -136,7 +158,13 @@ function deleteLetter(){
 function updateDivCell(){
     var cellID = 'row' + (rowIndex+1) + 'col' + (letterIndex+1);
     var cell = document.getElementById(cellID);
-    cell.innerHTML = '<div>'+rowContainerArray[rowIndex][letterIndex].toUpperCase()+'</div>';
+    var letter = rowContainerArray[rowIndex][letterIndex].toUpperCase()
+    cell.innerHTML = '<div>' + letter + '</div>';
+    if(letter ==''){
+        cell.className = cell.className.replace(' letterCellFilled','')
+    } else{
+        cell.className += ' letterCellFilled';
+    }
 }
 
 function bootGame(){

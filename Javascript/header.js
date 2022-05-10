@@ -10,5 +10,3 @@ function ordbøkeneLinker(){
     document.getElementById('menuLeftButton').innerHTML='';
     document.getElementById('menuLeftButton').appendChild(link)
 }
-
-headerInit()

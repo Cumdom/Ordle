@@ -2,7 +2,7 @@
     color:var(--text);
     display: flex;
     border-bottom: 1px solid var(--headerborder);
-    height: 8vh;
+    height: 7%;
     width: 100%;
     align-items: center;
     justify-content: space-between;
@@ -10,9 +10,16 @@
 }
 
 #gameLogo{
-    font-family: KarnakPro-CondesedBlack;
-    font-size: var(--headerfontsize);
+    font-family: KarnakPro-CondesedBlack, Arial, Helvetica, sans-serif;
+    font-size: calc(var(--kbfontsize)*2.8);
     /* flex-grow: 1; */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 #menuLeft{
