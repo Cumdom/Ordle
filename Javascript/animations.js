@@ -1,7 +1,7 @@
 let animator = {};
 animator.flipping       = false
 animator.popInSpeed     = 1;
-animator.flipSpeed      = 1.5;
+animator.flipSpeed      = 1.6;
 
 animator.popIn = _=>{
     var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(letterIndex+1));
@@ -13,7 +13,7 @@ animator.flip = colourPalette=>{
     animator.flipping = true
     var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(letterIndex+1));
     letterCell.style.animation = 'flipStart ' + (1/animator.flipSpeed) + 's';
-    letterCell.style.animationTimingFunction = 'linear';
+    letterCell.style.animationTimingFunction = 'ease-in';
     setTimeout(_=>{
         paintRow(colourPalette, letterCell)},
         500/animator.flipSpeed

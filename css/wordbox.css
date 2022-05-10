@@ -5,7 +5,7 @@
     /* width: fit-content; */max-width: 96vw;
     flex-direction: column;
     padding-bottom: 3%;
-    gap: 3.5%;
+    gap: 4%;
     /* margin-bottom: 30%; */
     left: calc(var(--kbfontsize)*50* -120 /10000);
     position: relative;
@@ -23,7 +23,7 @@
 }
 
 .wordRow {
-    width: 108.8%;
+    width: 108.7%;
     /* width: fit-content; *//* flex-grow: 1; */
     height: 20%;
     display: flex;
@@ -33,7 +33,7 @@
 
 .letterCell {
     width: 16.79%;
-    height: 102%;
+    height: 101.9%;
     border: var(--cellborderwidth) solid var(--cellborder);
     color: var(--text);
     font-weight: 550;

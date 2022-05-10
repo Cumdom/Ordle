@@ -8,14 +8,14 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
     /**    5:2 ratio   */
-    width: 128%;
-    max-width: 98vw;height: 39%;
+    width: 134%;
+    max-width: 97vw;height: 38.5%;
     /* margin-bottom: 6%; */
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: flex-start;
-    /* margin-top: 4%; */
+    margin-top: 1.5%;
     overflow: hidden;}
 
 .keyboard{
