@@ -25,9 +25,11 @@ left: -0.7vh;position: relative;}
     font-weight: 550;
     font-size: calc(var(--kbfontsize)*2);
     text-align: center;
-
     display: flex;
-flex-direction: column;justify-content: center;}
+    flex-direction: column;
+    justify-content: center;
+    user-select: none;
+}
 
 .letterCellRight{
     background-color: var(--green);
