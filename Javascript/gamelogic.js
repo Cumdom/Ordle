@@ -9,42 +9,46 @@ let dailyWord = [...ordListe[currentDay]];
 let rowContainerArray = [];
 let letterIndex = 0;
 let rowIndex = 0;
-let gameOver = false;
 
-function checkRow(){
+
+
+let gameHandler = {};
+
+gameHandler.checkRow = _=>{
     if(letterIndex == 5){
         var word = "";
         for(i=0;i<5;i++){
+            // console.log(rowContainerArray, rowContainerArray[rowIndex], rowIndex)
             word += rowContainerArray[rowIndex][i];
         }
         return ordListe.includes(word)
     }
 }
 
-function newRow(){
-    var presetRow = [[],[],[],[],[]];
+gameHandler.newRow = _=>{
+    var presetRow = [];
     rowContainerArray.push(presetRow);
 }
 
-function editRow(e){
-    if(!gameOver&&!animator.flipping){
+gameHandler.editRow = (e)=>{
+    if(!gameData.gameOver&&!animator.flipping){
         var activeRow = rowContainerArray[rowIndex];
         var keyInput = e.key;
         if(alphabet.includes(keyInput.toLowerCase())){
-            addLetter(keyInput.toLowerCase())
+            gameHandler.addLetter(keyInput.toLowerCase())
         } else if(keyInput == 'Backspace'){
-            deleteLetter()
+            gameHandler.deleteLetter()
             
         } else if(keyInput == 'Enter'){
-            commitRow()        
+            gameHandler.commitRow()        
         }
     }
 }
 
-function addLetter(letter){
+gameHandler.addLetter = (letter)=>{
     if(letterIndex<5){
         rowContainerArray[rowIndex][letterIndex] = letter;
-        updateDivCell()
+        gameHandler.updateDivCell()
         animator.popIn()
         letterIndex++;
     }
@@ -52,28 +56,32 @@ function addLetter(letter){
 
 //! heavely integrated with animator.flip[...],  
 
-function commitRow(){
-    if(checkRow()){
+gameHandler.commitRow = reconstructorPassthrough=>{
+    console.log('commitrow',gameHandler.checkRow())
+    if(gameHandler.checkRow()){
         letterIndex = 0
-        animator.flip(comparisonPalette())
+        animator.flip(gameHandler.comparisonPalette(reconstructorPassthrough))
         // animator.flipStart(comparisonPalette())
-
+        cookie.keyboardPaletteSaver()
+        gameData.registeredWords = rowContainerArray;
     }
 }
 
-function commitRowContinuator(){
-    keyboardPainter()
-    if(gameOver){
+gameHandler.commitRowContinuator = _=>{
+    
+    keyboard.painter()
+    if(gameData.gameOver){
         // document.removeEventListener('keydown',editRow);
         return
     }
-    newRow();
+    gameHandler.newRow();
     rowIndex++;
     letterIndex=0;
+    
 }
 
 
-function comparisonPalette(){
+gameHandler.comparisonPalette = reconstructorPassthrough=>{
     var currentRow = rowContainerArray[rowIndex];
     var palette = [0,0,0,0,0];
     var correctCount = 0;
@@ -83,18 +91,28 @@ function comparisonPalette(){
         if (dailyWord.includes(currentLetter)){
             if(dailyWord[i]==currentLetter){
                 palette[i] = 1;
-                greenLetters.push(currentLetter)
+                if(!keyboard.greenLetters.includes(currentLetter)){
+                    keyboard.greenLetters.push(currentLetter);
+                }
                 correctCount++
             }else{
                 palette[i] = 2;
-                yellowLetters.push(currentLetter)
+                if(!keyboard.yellowLetters.includes(currentLetter)){
+                    keyboard.yellowLetters.push(currentLetter);
+                }
             }
         } else{
-            grayLetters.push(currentLetter);
+            if(!keyboard.grayLetters.includes(currentLetter)){
+                keyboard.grayLetters.push(currentLetter);
+            }
         }
     }
     if(correctCount==5){
-        gameOver = true;
+        gameData.gameOver = true;
+        if(reconstructorPassthrough!=true){
+            gameData.registeredPalettes.push(palette);
+        }
+        
         return palette;
     }
     //Cleans palette of redundant yellows. full av vonde tanker :)))))))
@@ -111,54 +129,38 @@ function comparisonPalette(){
             }
         }
     }
-
+    if(reconstructorPassthrough!=true){
+        gameData.registeredPalettes.push(palette);
+    }
     return palette;
 }
 
 
-// function paintRow(palette){
-//     for (i=0;i<5;i++) {
-//         var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(i+1));
-//         switch (palette[i]) {
-//             case 0:
-//                 letterCell.className += ' letterCellWrong';
-//             break;
-//             case 1:
-//                 letterCell.className += ' letterCellRight';
-//             break;
-//             case 2:
-//                 letterCell.className += ' letterCellPresence';
-//             break;
-//         }
-//     }
-// }
-
-function paintRow(palette, letterCell){
-    // var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(letterIndex+1));
-    console.log(palette)
-    switch (palette[letterIndex]) {
-        case 0:
+gameHandler.paintRow = (palette, letterCell)=>{
+    switch (palette[letterIndex-1]){
+        case 0 : {
             letterCell.className += ' letterCellWrong';
-        break;
-        case 1:
+        }break;
+        case 1 : {
             letterCell.className += ' letterCellRight';
-        break;
-        case 2:
+        }break;
+        case 2 : {
             letterCell.className += ' letterCellPresence';
-        break;
+        }break;
     }
 }
 
 
-function deleteLetter(){
+gameHandler.deleteLetter = _=>{
     if(letterIndex>0){
         letterIndex--;
+        console.log('letterindex',letterIndex)
         rowContainerArray[rowIndex][letterIndex] = '';
-        updateDivCell()
+        gameHandler.updateDivCell()
     }
 }
 
-function updateDivCell(){
+gameHandler.updateDivCell = _=>{
     var cellID = 'row' + (rowIndex+1) + 'col' + (letterIndex+1);
     var cell = document.getElementById(cellID);
     var letter = rowContainerArray[rowIndex][letterIndex].toUpperCase()
@@ -170,7 +172,7 @@ function updateDivCell(){
     }
 }
 
-function bootGame(){
+gameHandler.bootGame = _=>{
     var gameContainer = document.getElementById('gameContainer');
     if(blankCache!=undefined){
         gameContainer.innerHTML = blankCache;
@@ -178,7 +180,7 @@ function bootGame(){
         rowContainerArray = [];
         letterIndex = 0;
         rowIndex = 0;
-        gameOver = false;
+        gameData.gameOver = false;
 
         grayLetters = [];
         yellowLetters = [];
@@ -187,8 +189,8 @@ function bootGame(){
 
     blankCache = gameContainer.innerHTML;
 
-    window.addEventListener('keydown',editRow)
-    newRow()
-    addKeyboardEventlistener()
+    window.addEventListener('keydown',gameHandler.editRow)
+    gameHandler.newRow()
+    keyboard.addKeyboardEventlistener()
     ordbøkeneLinker()
 }

@@ -1,8 +1,8 @@
 function yggdrasil(){
-    cookie.monster()
-    bootGame()
+    gameHandler.bootGame()
     viewScaling.handler()
     headerInit()
+    cookie.onLoad()
 }
 yggdrasil()
 

@@ -1,35 +1,34 @@
-let grayLetters = []
-let yellowLetters = []
-let greenLetters = []
+let keyboard = {}
+keyboard.grayLetters = []
+keyboard.yellowLetters = []
+keyboard.greenLetters = []
 
 
-function unlightKey(x){
-    var key = document.getElementById('keyboard-' + x);
-    key.className += ' incorrectLetter'
-}
-
-function addKeyboardEventlistener(){
+keyboard.addKeyboardEventlistener = _=>{
     var keys = [...document.getElementById('keyboard').children]
     keys.forEach(x=>{
         var i = {key:x.id.slice(9)}
-
-        x.addEventListener('click',_=>editRow(i))
+        x.addEventListener('click',_=>gameHandler.editRow(i))
     });
 }
 
-function keyboardPainter(){
-    grayLetters.forEach(x => {
+keyboard.painter = _=>{
+    keyboard.grayLetters.forEach(x => {
         var grayKey = document.getElementById('keyboard-'+x);
-        grayKey.className = 'keyboardKey incorrectLetter';
+        if(grayKey!=undefined){
+            grayKey.className = 'keyboardKey incorrectLetter';
+        }
     })
-    yellowLetters.forEach(x => {
+    keyboard.yellowLetters.forEach(x => {
         var grayKey = document.getElementById('keyboard-'+x);
+        if(grayKey!=undefined){
         grayKey.className = 'keyboardKey yellowLetter';
+        }
     })
-    greenLetters.forEach(x => {
+    keyboard.greenLetters.forEach(x => {
         var grayKey = document.getElementById('keyboard-'+x);
+        if(grayKey!=undefined){
         grayKey.className = 'keyboardKey greenLetter';
+        }   
     })
-    
-    
 }

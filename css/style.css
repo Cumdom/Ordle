@@ -39,7 +39,7 @@ font-face {
     --yellow:       #dfc21c;
     --darkcell:     #cccccc;
     --cellborder:   #cccccc;
-    --cellborderfilled:   #666666;
+    --cellborderfilled: #888888;
 
     /* *   KEYBOARD COLOURS     */
     --lit: #E4E4E8;

@@ -1,7 +1,7 @@
 let animator = {};
 animator.flipping       = false
 animator.popInSpeed     = 1;
-animator.flipSpeed      = 1.6;
+animator.flipSpeed      = 2;
 
 animator.popIn = _=>{
     var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(letterIndex+1));
@@ -10,17 +10,21 @@ animator.popIn = _=>{
 }
 
 animator.flip = colourPalette=>{
+    cookie.storeStates()
     animator.flipping = true
     var letterCell = document.getElementById('row'+(rowIndex+1)+'col'+(letterIndex+1));
-    letterCell.style.animation = 'flipStart ' + (1/animator.flipSpeed) + 's';
-    letterCell.style.animationTimingFunction = 'ease-in';
-    setTimeout(_=>{
-        paintRow(colourPalette, letterCell)},
-        500/animator.flipSpeed
+    if(letterCell!=undefined){
+        letterCell.style.animation = 'flipStart ' + (1/animator.flipSpeed) + 's';
+        letterCell.style.animationTimingFunction = 'ease-in-out';
+        setTimeout(_=>{
+            gameHandler.paintRow(colourPalette, letterCell)},
+            500/animator.flipSpeed    
         );
-        if(letterIndex>3){
-            setTimeout(_=>{
-                commitRowContinuator()
+        
+    }
+    if(letterIndex>4){
+        setTimeout(_=>{
+                gameHandler.commitRowContinuator()
                 animator.flipping = false
         },1000/animator.flipSpeed)
     } else{
