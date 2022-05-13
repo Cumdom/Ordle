@@ -30,12 +30,12 @@
 </body>
 <script type="text/javascript">
 	var hoveddelE1 = document.querySelector('.hoveddel')
-	// var eventliste = ['touchstart','touchend','touchcancel','touchmove','click','mousedown','mouseup']
-	// for (var eventIde of eventliste){
-	// 	var divNew = document.createElement('div');
-	// 	divNew.addEventListener(eventIde,forandreFarge)
-	// 	hoveddelE1.appendChild(divNew)
-	// }
+	var eventliste = ['touchstart','touchend','touchcancel','touchmove','click','mousedown','mouseup']
+	for (var eventIde of eventliste){
+		var divNew = document.createElement('div');
+		divNew.addEventListener(eventIde,forandreFarge)
+		hoveddelE1.appendChild(divNew)
+	}
 
 	function forandreFarge(e){
         // console.log(e)
