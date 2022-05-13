@@ -1,187 +1,46 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ordle</title>
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/keyboard.css">
-        <link rel="stylesheet" href="./css/wordbox.css">
-        <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/animations.css">
-    </head>
-    <body>
-        <div id="container">
-            <div id="header">
-                <div id="menuLeft">
-                    <div id="menuLeftButton"></div>
-                </div>
-                <div id="gameLogo">Ordle</div>
-                <div id="menuRight">
-                    <div id="menuRightButton"></div>
-                </div>
-            </div>
-            <div id="gameContainer">
-                <div id="wordContainer" class="wordContainer">
-                    <div class="wordRow" id="row1">
-                        <div class="letterCell" id="row1col1"></div>
-                        <div class="letterCell" id="row1col2"></div>
-                        <div class="letterCell" id="row1col3"></div>
-                        <div class="letterCell" id="row1col4"></div>
-                        <div class="letterCell" id="row1col5"></div>
-                    </div>
-                    <div class="wordRow" id="row2">
-                        <div class="letterCell" id="row2col1"></div>
-                        <div class="letterCell" id="row2col2"></div>
-                        <div class="letterCell" id="row2col3"></div>
-                        <div class="letterCell" id="row2col4"></div>
-                        <div class="letterCell" id="row2col5"></div>
-                    </div>
-                    <div class="wordRow" id="row3">
-                        <div class="letterCell" id="row3col1"></div>
-                        <div class="letterCell" id="row3col2"></div>
-                        <div class="letterCell" id="row3col3"></div>
-                        <div class="letterCell" id="row3col4"></div>
-                        <div class="letterCell" id="row3col5"></div>
-                    </div>
-                    <div class="wordRow" id="row4">
-                        <div class="letterCell" id="row4col1"></div>
-                        <div class="letterCell" id="row4col2"></div>
-                        <div class="letterCell" id="row4col3"></div>
-                        <div class="letterCell" id="row4col4"></div>
-                        <div class="letterCell" id="row4col5"></div>
-                    </div>
-                    <div class="wordRow" id="row5">
-                        <div class="letterCell" id="row5col1"></div>
-                        <div class="letterCell" id="row5col2"></div>
-                        <div class="letterCell" id="row5col3"></div>
-                        <div class="letterCell" id="row5col4"></div>
-                        <div class="letterCell" id="row5col5"></div>
-                    </div>
-                    <div class="wordRow" id="row6">
-                        <div class="letterCell" id="row6col1"></div>
-                        <div class="letterCell" id="row6col2"></div>
-                        <div class="letterCell" id="row6col3"></div>
-                        <div class="letterCell" id="row6col4"></div>
-                        <div class="letterCell" id="row6col5"></div>
-                    </div>
-                </div>
-                <div id="keyboardContainer">
-                    <div id="keyboard" class="keyboard">
-                        <div id="keyboard-q" class="keyboardKey">
-                            <div class="keyText">Q</div>
-                        </div>
-                        <div id="keyboard-w" class="keyboardKey">
-                            <div class="keyText">W</div>
-                        </div>
-                        <div id="keyboard-e" class="keyboardKey">
-                            <div class="keyText">E</div>
-                        </div>
-                        <div id="keyboard-r" class="keyboardKey">
-                            <div class="keyText">R</div>
-                        </div>
-                        <div id="keyboard-t" class="keyboardKey">
-                            <div class="keyText">T</div>
-                        </div>
-                        <div id="keyboard-y" class="keyboardKey">
-                            <div class="keyText">Y</div>
-                        </div>
-                        <div id="keyboard-u" class="keyboardKey">
-                            <div class="keyText">U</div>
-                        </div>
-                        <div id="keyboard-i" class="keyboardKey">
-                            <div class="keyText">I</div>
-                        </div>
-                        <div id="keyboard-o" class="keyboardKey">
-                            <div class="keyText">O</div>
-                        </div>
-                        <div id="keyboard-p" class="keyboardKey">
-                            <div class="keyText">P</div>
-                        </div>
-                        <div id="keyboard-å" class="keyboardKey">
-                            <div class="keyText">Å</div>
-                        </div>
-                        <div class="keyboardBreak">
-                            <div class="keyText"></div>
-                        </div>
-                        <div id="keyboard-a" class="keyboardKey">
-                            <div class="keyText">A</div>
-                        </div>
-                        <div id="keyboard-s" class="keyboardKey">
-                            <div class="keyText">S</div>
-                        </div>
-                        <div id="keyboard-d" class="keyboardKey">
-                            <div class="keyText">D</div>
-                        </div>
-                        <div id="keyboard-f" class="keyboardKey">
-                            <div class="keyText">F</div>
-                        </div>
-                        <div id="keyboard-g" class="keyboardKey">
-                            <div class="keyText">G</div>
-                        </div>
-                        <div id="keyboard-h" class="keyboardKey">
-                            <div class="keyText">H</div>
-                        </div>
-                        <div id="keyboard-j" class="keyboardKey">
-                            <div class="keyText">J</div>
-                        </div>
-                        <div id="keyboard-k" class="keyboardKey">
-                            <div class="keyText">K</div>
-                        </div>
-                        <div id="keyboard-l" class="keyboardKey">
-                            <div class="keyText">L</div>
-                        </div>
-                        <div id="keyboard-ø" class="keyboardKey">
-                            <div class="keyText">Ø</div>
-                        </div>
-                        <div id="keyboard-æ" class="keyboardKey">
-                            <div class="keyText">Æ</div>
-                        </div>
-                        <div class="keyboardBreak">
-                            <div class="keyText"></div>
-                        </div>
-                        <div id="keyboard-Enter" class="keyboardKey">
-                            <div class="keyText">ENTER</div>
-                        </div>
-                        <div id="keyboard-z" class="keyboardKey">
-                            <div class="keyText">Z</div>
-                        </div>
-                        <div id="keyboard-x" class="keyboardKey">
-                            <div class="keyText">X</div>
-                        </div>
-                        <div id="keyboard-c" class="keyboardKey">
-                            <div class="keyText">C</div>
-                        </div>
-                        <div id="keyboard-v" class="keyboardKey">
-                            <div class="keyText">V</div>
-                        </div>
-                        <div id="keyboard-b" class="keyboardKey">
-                            <div class="keyText">B</div>
-                        </div>
-                        <div id="keyboard-n" class="keyboardKey">
-                            <div class="keyText">N</div>
-                        </div>
-                        <div id="keyboard-m" class="keyboardKey">
-                            <div class="keyText">M</div>
-                        </div>
-                        <div id="keyboard-Backspace" class="keyboardKey backspace">
-                            <div class="keyText">⌦</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="./Javascript/header.js"></script>
-        <script src="./Javascript/animations.js"></script>
-        <script src="./Javascript/scaling.js"></script>
-        <script src="./Javascript/cookiehandler.js"></script>
-        <script src="./Javascript/wordlist.js"></script>
-        <script src="./Javascript/gamelogic.js"></script>
-        <script src="./Javascript/keyboard.js"></script>
-        <script src="./Javascript/main.js"></script>
-        <script>
-            var hoved = document.getElementById('header')
-            var div = hoved.children[1]
-            div.addEventListener('click',gameHandler.bootGame)
-        </script>
-    </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style type="text/css">
+	div {
+		width: 100px;
+		height: 100px;
+		background-color: indianred;
+		border-radius: 20px;
+		
+	}
+	.hoveddel {
+		display: flex;
+		flex-direction:row;
+		flex-wrap: wrap;
+		background-color: grey;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+<body>
+	<div class="hoveddel"><div></div></div>
+
+</body>
+<script type="text/javascript">
+	var hoveddelE1 = document.querySelector('.hoveddel')
+	var eventliste = ['touchstart','touchend','touchcancel','touchmove','click','mousedown','mouseup']
+	for (var eventIde of eventliste){
+		var divNew = document.createElement('div');
+		divNew.addEventListener(eventIde,forandreFarge)
+		hoveddelE1.appendChild(divNew)
+	}
+
+	function forandreFarge(e){
+		e.path[0].style.backgroundColor = 'black'
+	}
+
+	var hoved = document.getElementById('hoveddel')
+	var div = hoved.children[0]
+	div.addEventListener('click',forandreFarge)
+</script>
 </html>

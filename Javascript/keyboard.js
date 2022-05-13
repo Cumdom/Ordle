@@ -1,9 +1,3 @@
-// var hoved = [...document.getElementById('header').children]
-// 	var div = hoved[1]
-// 	div.addEventListener('click',_=>{gameHandler.bootGame()})
-
-
-
 let keyboard = {}
 keyboard.grayLetters = []
 keyboard.yellowLetters = []
