@@ -178,5 +178,10 @@
         <script src="./Javascript/gamelogic.js"></script>
         <script src="./Javascript/keyboard.js"></script>
         <script src="./Javascript/main.js"></script>
+        <script>
+            var hoved = document.getElementById('header')
+            var div = hoved.children[1]
+            div.addEventListener('click',gameHandler.bootGame)
+        </script>
     </body>
 </html>

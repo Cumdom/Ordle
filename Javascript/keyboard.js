@@ -1,9 +1,7 @@
 // var hoved = [...document.getElementById('header').children]
 // 	var div = hoved[1]
 // 	div.addEventListener('click',_=>{gameHandler.bootGame()})
-var hoved = document.getElementById('header')
-var div = hoved.children[1]
-div.addEventListener('click',gameHandler.bootGame)
+
 
 
 let keyboard = {}
