@@ -9,7 +9,7 @@
 	div {
 		width: 100px;
 		height: 100px;
-		background-color: rgb(175, 126, 126);
+		background-color: rgb(126, 175, 168);
 		border-radius: 20px;
 		
 	}
@@ -43,7 +43,7 @@
 	}
 
 	var hoved = document.getElementById('hoveddel')
-	var div = hoved.children[0]
+	var div = [...hoved.children][0]
 	div.addEventListener('click',forandreFarge)
 </script>
 </html>
