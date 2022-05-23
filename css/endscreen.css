@@ -1,0 +1,151 @@
+#endscreenContainer {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    position: absolute;
+    /* width: calc(var(--kbfontsize)*(50/2)*1.7*1.37); */
+    /* max-width: 97vw; */
+    height: 100%;
+    background-color: var(--endscreenbackground);
+    /* opacity: 50%; */
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    align-items: center;
+animation-fill-mode: forwards;width: 100vw;}
+
+#columnContainer div{
+    font-size: calc(var(--kbfontsize)*1.5) ;
+}
+
+#endscreenContainer div {
+    display: flex;
+    
+    z-index: 2;
+
+
+    /* justify-content: space-evenly; */
+
+}
+
+/* #endscreenContainer>div div{
+    opacity: 10%;
+} */
+#endscreenBox {
+    height: 80%;
+    max-width: 97vw;width: 36%;
+    background-color: var(--background);
+    border-radius: var(--kbfontsize);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.17);
+
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+/* animation: endscreenFadeIn .66s; */animation-fill-mode: forwards;}
+
+#columnContainer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+    height: calc(var(--kbfontsize)*12);
+    width: calc(var(--kbfontsize)*24);
+}
+
+#columnGraphNumbers {
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    flex-grow: 1;
+    gap: 2%;
+}
+
+#columnGraphNumbers>div {
+    height: calc(var(--kbfontsize)*1.8);
+    width: 100%;
+    display: flex;
+align-content: center;align-items: center;justify-content: center;}
+
+#columnGraphContainer {
+    
+    color: var(--white);
+    width: 10%;
+    flex-direction: column;
+    gap: 2%;
+    justify-content: center;
+    flex-grow: 19;
+padding-right: 5.55%;}
+
+.columnGraph {
+    flex-direction: row;align-items: center;
+    height: calc(var(--kbfontsize)*1.8)   ;
+    width: 100%;
+}
+
+.columnGraph>div {
+    height: 100%;
+    width: 50%;
+    background-color: var(--green);
+    min-width: calc(var(--kbfontsize)*1.8) ;
+/* padding-right: 1%; */flex-direction: row;justify-content: flex-end;align-items: center;}
+
+.columnGraph>div>div{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+min-width: fit-content;width: calc(var(--kbfontsize)*1.8);}
+.columnGraph>div>div>div{
+    width: calc(var(--kbfontsize)*1.8);
+    text-align: center;
+}
+
+
+
+#streakContainer{
+    width: calc(var(--kbfontsize)*24);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+/* flex-grow: 1; */height: calc(var(--kbfontsize)*8);}
+
+#streakContainer>div{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#streakContainer>div>div{
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;align-items: center;}
+
+#streakSubtitleContainer{
+    font-size: var(--kbfontsize);
+}
+#streakNumberContainer{
+    font-size: calc(var(--kbfontsize)*2.5);
+font-weight: 500;}
+
+#countdownContainer{
+    flex-grow: 1;
+}
+
+.statTitle{
+    font-size: calc(var(--kbfontsize)*1.4);
+    font-weight: 550;
+    margin-bottom: 2%;
+}
+
+#endscreenExitButton{
+    margin: calc(var(--kbfontsize)*1);
+    height: fit-content;
+    background-color: browns;
+width: 92%;font-size: calc(var(--kbfontsize)*2.2);align-items: end;justify-content: end;flex-direction: row;/* color: var(--darkcell); */}
+#endscreenExitButton>div{
+    padding: calc(var(--kbfontsize)/3);
+    transform: scaleY(0.9);
+    
+    cursor: pointer;
+}

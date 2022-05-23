@@ -4,7 +4,13 @@ let gameData = {
     gameOver:false,
     registeredWords:[],
     registeredPalettes:[],
-    keyboardPalettes:[[],[],[],]
+    keyboardPalettes:[[],[],[],],
+    scores:[0,0,0,0,0,0,false,0,0,0],
+    //* scores: index 0-5 are the winning row scores
+    //*         index 6 is used to determine if the player has won this page load or if the have refreshed.
+    //*         index 7 is the current win streak length.
+    //*         index 8 is the highest win streak length.
+    //*         index 9 is games played.
 }
 
 cookie.keyboardPaletteSaver = _=>{
@@ -84,6 +90,10 @@ cookie.splitArray = (array)=>{
 
 cookie.onLoad = _=>{
     cookie.fetchState('dicks','gameOver')
+    cookie.getScores()
+    if(gameData.scores==undefined){
+        gameData.scores = [0,0,0,0,0,0,false,0,0,0];
+    }
     if (gameData.gameOver[0] =='false'||gameData.gameOver[0]==false||gameData.gameOver==false){
         gameData.gameOver = false
     } else{
@@ -109,9 +119,11 @@ cookie.onLoad = _=>{
     console.log('lastday',lastDayPlayed)
     console.log('curerntday',currentDay)
     if(lastDayPlayed==currentDay){
+        gameData.scores[6]=false
         cookie.reconstructor()
         console.log('reconstructerd')
     } else{
+        gameData.scores[6]=false
         cookie.clearGameData()
         console.log('cleared')
     }
@@ -136,4 +148,14 @@ cookie.reprocessArray = (array,length)=>{
         fixedArray.push(subarray)
     }
     return fixedArray
+}
+
+cookie.setScores = _=>{
+    var scores = JSON.stringify(gameData.scores)
+    localStorage.setItem('scores',scores);
+}
+
+cookie.getScores = _=>{
+    var JSONscores = localStorage.getItem('scores')
+    gameData.scores = JSON.parse(JSONscores) 
 }

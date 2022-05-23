@@ -5,9 +5,9 @@
     height: 7%;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    
     user-select: none;
-}
+justify-content: space-between;}
 
 #gameLogo{
     font-family: KarnakPro-CondesedBlack, Arial, Helvetica, sans-serif;
@@ -23,15 +23,15 @@
 }
 
 #menuLeft{
-    height: 10px;
+    padding: 5vh;height: 10px;
     width: 10px;
     /* background-color: blue; */
-flex-grow: 1;}
+/* flex-grow: 1; */}
 #menuRight{
-    display: flex;height: 10px;
+    display: flex;padding: 5vh;height: 10px;
     width: 10px;
     /* background-color: blue; */
-    flex-grow: 1;
+    /* flex-grow: 1; */
     flex-direction: row-reverse;
     justify-content: space-between;
     align-content: flex-start;
@@ -39,7 +39,30 @@ flex-grow: 1;}
 }
 
 #menuRightButton,#menuLeftButton{
-    height: 20px;
-    width: 20px;
-    background-color: blue;
+    cursor: pointer;
+    height: 4vh;
+    width: 4vh;
+}
+
+#menuRightIcon{
+    position: relative;
+    height: 100%;
+    width: 85%;
+    display: flex;
+    gap: 0.33vh;
+
+align-items: flex-end;}
+#menuRightIcon>div{
+    outline: 0.4vh solid black;
+    flex-grow: 1;
+    /* border: 0.4vh solid var(--headerborder); */
+}
+#menuRightIcon>div:nth-child(1){
+    height: 60%;
+}
+#menuRightIcon>div:nth-child(2){
+    height: 90%;
+}
+#menuRightIcon>div:nth-child(3){
+    height: 40%;
 }

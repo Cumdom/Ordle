@@ -9,7 +9,7 @@
                                   supported by Chrome, Edge, Opera and Firefox */
     /**    5:2 ratio   */
     width: 134%;
-    max-width: 97vw;height: 38.5%;
+    max-width: 95vw;height: 38.5%;
     /* margin-bottom: 6%; */
     display: flex;
     flex-direction: row;
@@ -99,4 +99,5 @@
 
 .backspace>div{
     transform: scale(-2.5,2.5);
+    text-shadow: calc(var(--kbfontsize)/80) 0 0 var(--text), 0 calc(-1*var(--kbfontsize)/80) 0 var(--text), 0 calc(var(--kbfontsize)/80) 0 var(--text), calc(-1*var(--kbfontsize)/80) 0 0 var(--text);
 }

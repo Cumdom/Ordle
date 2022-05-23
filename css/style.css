@@ -28,7 +28,8 @@ font-face {
     --kbfontsize: 0;
     --cellborderwidth: calc(var(--kbfontsize)*51* 4 /1000); 
     /* *   GENERAL COLOURS      */
-    --background: #fbfbfb;
+    --background: rgba(251, 251, 251, 100);
+    --endscreenbackground: rgba(251, 251, 251, 50%);
     --text: #1F1F1F;
     --white: #FFFFFF;
 
@@ -52,6 +53,7 @@ font-face {
 }
 :root .nightmode{
     --background: #2a2a2a;
+    --endscreenbackground: #2a2a2a80;
     
     --darkcell:     #464646;
     --cellborder:   #3f3f3f;
@@ -115,4 +117,4 @@ overflow: hidden;
     max-width: 100%;height: 90%;
     margin-top: 0.4%;
     gap: 16.7%;
-}
+z-index: 0;}

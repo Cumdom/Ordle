@@ -32,6 +32,8 @@ gameHandler.newRow = _=>{
 
 gameHandler.editRow = (e)=>{
     if(!gameData.gameOver&&!animator.flipping){
+        gameData.scores[6] = true;
+        console.log(gameData.scores)
         var activeRow = rowContainerArray[rowIndex];
         var keyInput = e.key;
         if(alphabet.includes(keyInput.toLowerCase())){
@@ -70,9 +72,8 @@ gameHandler.commitRow = reconstructorPassthrough=>{
 gameHandler.commitRowContinuator = _=>{
     
     keyboard.painter()
-    if(gameData.gameOver){
-        // document.removeEventListener('keydown',editRow);
-        return
+    if(gameData.gameOver||rowIndex==5){
+        gameHandler.endGame()
     }
     gameHandler.newRow();
     rowIndex++;
@@ -193,4 +194,32 @@ gameHandler.bootGame = _=>{
     gameHandler.newRow()
     keyboard.addKeyboardEventlistener()
     ordbøkeneLinker()
+}
+
+gameHandler.endGame = _=>{
+    gameData.scores[9]++
+    if(gameData.gameOver){
+        gameHandler.wonGame()
+    } else{
+        gameHandler.lostGame()
+    }
+}
+
+gameHandler.wonGame = _=>{
+    if(gameData.scores[6]){
+        gameData.scores[rowIndex]++
+        gameData.scores[7]++
+        if(gameData.scores[7]>gameData.scores[8]){
+            gameData.scores[8]++
+        }
+    }
+    cookie.setScores()
+    console.log(gameData.scores)
+
+    console.log('won')
+    endHandler.popUp()
+}
+gameHandler.lostGame = _=>{
+    console.log('lost')
+    endHandler.popUp()
 }

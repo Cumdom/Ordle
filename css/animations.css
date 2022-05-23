@@ -4,7 +4,47 @@
 }
 
 @keyframes flipStart {
-    0% {transform: scaleY(1);}
-    50%{transform: scaleY(0);}
+    0%  {transform: scaleY(1);}
+    50% {transform: scaleY(0);}
     100%{transform: scaleY(1);}
+}
+
+
+@keyframes endscreenFadeOut {
+    0%{
+        pointer-events: all;
+        opacity: 1;
+    }
+    100%  {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+@keyframes endscreenFadeIn {
+    0%  {
+        pointer-events: none;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+@keyframes endscreenBoxFadeIn {
+    0%  {
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes endscreenBoxFadeOut {
+    0%{
+        transform: translateY(0);
+    }
+    100%  {
+        transform: translateY(100vh);
+    }
 }

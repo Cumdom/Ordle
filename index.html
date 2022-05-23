@@ -8,16 +8,24 @@
         <link rel="stylesheet" href="./css/wordbox.css">
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/animations.css">
+        <link rel="stylesheet" href="./css/endscreen.css">
     </head>
     <body>
         <div id="container">
+
             <div id="header">
                 <div id="menuLeft">
                     <div id="menuLeftButton"></div>
                 </div>
                 <div id="gameLogo">Ordle</div>
                 <div id="menuRight">
-                    <div id="menuRightButton"></div>
+                    <div id="menuRightButton">
+                        <div id="menuRightIcon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="gameContainer">
@@ -169,8 +177,101 @@
                     </div>
                 </div>
             </div>
+            <div id="endscreenContainer">
+                <div id="endscreenBox">
+                    <div id="endscreenExitButton">
+                        <div>X</div>
+                    </div>
+                    <div class="statTitle">STATISTIKK</div>
+                    <div id="streakContainer">
+                        <div id="streakNumberContainer">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div id="streakSubtitleContainer">
+                            <div>Spilt</div>
+                            <div>Vinn %</div>
+                            <div>Nåværende <br> Streak</div>
+                            <div>Høyest <br> Streak</div>
+                        </div>
+                    </div>
+                    <div class="statTitle">Forsøk Fordeling</div>
+                    <div id="columnContainer">
+                        <div id="columnGraphNumbers">
+                            <div>
+                                <div>1</div>
+                            </div>
+                            <div>
+                                <div>2</div>
+                            </div>
+                            <div>
+                                <div>3</div>
+                            </div>
+                            <div>
+                                <div>4</div>
+                            </div>
+                            <div>
+                                <div>5</div>
+                            </div>
+                            <div>
+                                <div>6</div>
+                            </div>
+                        </div>
+                        <div id="columnGraphContainer">
+                            <div id="columnGraphNo1" class="columnGraph">
+                                <div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="columnGraphNo2" class="columnGraph">
+                                <div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="columnGraphNo3" class="columnGraph">
+                                <div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="columnGraphNo4" class="columnGraph">
+                                <div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="columnGraphNo5" class="columnGraph">
+                                <div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="columnGraphNo6" class="columnGraph">
+                                <div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="countdownContainer">
+
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="./Javascript/header.js"></script>
+        <script src="./Javascript/endscreen.js"></script>
         <script src="./Javascript/animations.js"></script>
         <script src="./Javascript/scaling.js"></script>
         <script src="./Javascript/cookiehandler.js"></script>
