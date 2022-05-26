@@ -1,4 +1,4 @@
-let currentDay = Math.floor(Date.now()/(1000*60*60*24)) - 19087+2;
+let currentDay = Math.floor(Date.now()/(1000*60*60*24)) - 19087;
 let alphabet = [
     'q','w','e','r','t','y','u','i','o','p','å','a','s','d','f','g','h','j','k','l','ø','æ','z','x','c','v','b','n','m'
 ]

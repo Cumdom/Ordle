@@ -48,7 +48,7 @@ statHandler.writeStreakStats = _=>{
     var stats = statHandler.fetchStreakStats();
     var statBoxes = [...document.getElementById('streakNumberContainer').children]
     for(i=0;i<4;i++){
-        statBoxes[i].innerHTML = Math.round(stats[i]*10)/10
+        statBoxes[i].innerHTML = Math.floor(stats[i]*10)/10
     }
 }
 
@@ -84,7 +84,7 @@ endHandler.ordbøkeneLinker = _=>{
     document.getElementById('ordbokBox').addEventListener('click',endHandler.ordbøkeneLinkinator)
 }
 endHandler.ordbøkeneLinkinator = _=>{
-    window.location.href ='https://ordbokene.no/bm,nn/search?q='+ordListe[currentDay]+'&scope=ei';
+    window.open('https://ordbokene.no/bm,nn/search?q='+ordListe[currentDay]+'&scope=ei', '_blank');
 }
 
 endHandler.init = _=>{
