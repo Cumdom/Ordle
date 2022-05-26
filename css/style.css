@@ -16,9 +16,13 @@ div{
     font-family: KarnakPro-CondesedBlack;
     src: url(../fonts/KarnakPro-CondensedBlack.otf);
 }
-font-face {
+@font-face {
     font-family: arial-unicode-ms;
     src: url(../fonts/arial-unicode-ms.ttf);
+}
+@font-face {
+    font-family: InriaSerif-Regular;
+    src: url(../fonts/InriaSerif-Regular.ttf);
 }
 /*
 * COLOUR DEFINITIONS
@@ -32,6 +36,7 @@ font-face {
     --endscreenbackground: rgba(251, 251, 251, 50%);
     --text: #1F1F1F;
     --white: #FFFFFF;
+    --ordbøkenerød: #560027;
 
     --headerborder: #aFaFaF;
     
@@ -50,6 +55,8 @@ font-face {
     --yellowpressed:       hsl(51, 100%, 45%);
     --litpressed: hsl(240, 1%, 71%);
     --unlitpressed: hsl(211, 14%, 51%);
+
+    --ordbokpointer: pointer;
 }
 :root .nightmode{
     --background: #2a2a2a;

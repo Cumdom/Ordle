@@ -3,9 +3,8 @@ function yggdrasil(){
     viewScaling.handler()
     headerInit()
     cookie.onLoad()
-
-    
-endHandler.assignExitButton()
+    endHandler.init()
+    endHandler.assignExitButton()
 }
 yggdrasil()
 

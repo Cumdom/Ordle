@@ -71,13 +71,18 @@
     color: var(--text);
     font-weight: 550;
     font-size: var(--kbfontsize);
-    text-align: center;
-}
+    text-align: center;}
 
 #keyboard-Enter,#keyboard-Backspace{
     flex-grow: 36;
 }
+#keyboard-Enter{
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
 #keyboard-Backspace .keytext{
+    
+    font-family: 'arial-unicode-ms';
     font-weight: normal;
 }
 
@@ -98,6 +103,6 @@
 }
 
 .backspace>div{
-    transform: scale(-2.5,2.5);
-    text-shadow: calc(var(--kbfontsize)/80) 0 0 var(--text), 0 calc(-1*var(--kbfontsize)/80) 0 var(--text), 0 calc(var(--kbfontsize)/80) 0 var(--text), calc(-1*var(--kbfontsize)/80) 0 0 var(--text);
+    transform: scale(-3.5,3.5);
+    height: 27%;font-weight: lighter;/* text-shadow: calc(var(--kbfontsize)/80) 0 0 var(--text), 0 calc(-1*var(--kbfontsize)/80) 0 var(--text), 0 calc(var(--kbfontsize)/80) 0 var(--text), calc(-1*var(--kbfontsize)/80) 0 0 var(--text); */
 }

@@ -36,7 +36,7 @@
     height: 101.9%;
     border: var(--cellborderwidth) solid var(--cellborder);
     color: var(--text);
-    font-weight: 550;
+    font-weight: bolder;
     font-size: calc(var(--kbfontsize) * 2);
     text-align: center;
     display: flex;

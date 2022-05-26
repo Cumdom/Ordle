@@ -1,7 +1,7 @@
 #endscreenContainer {
     opacity: 0;
     pointer-events: none;
-    z-index: 1;
+    /* z-index: 1; */
     position: absolute;
     /* width: calc(var(--kbfontsize)*(50/2)*1.7*1.37); */
     /* max-width: 97vw; */
@@ -15,28 +15,26 @@
     justify-content: center;
 
     align-items: center;
-animation-fill-mode: forwards;width: 100vw;}
+    animation-fill-mode: forwards;
+    width: 100vw;
+}
 
-#columnContainer div{
-    font-size: calc(var(--kbfontsize)*1.5) ;
+#columnContainer div {
+    font-size: calc(var(--kbfontsize)*1.4);
 }
 
 #endscreenContainer div {
     display: flex;
-    
-    z-index: 2;
-
-
-    /* justify-content: space-evenly; */
-
 }
 
 /* #endscreenContainer>div div{
     opacity: 10%;
 } */
 #endscreenBox {
+    z-index: 2;
     height: 80%;
-    max-width: 97vw;width: 36%;
+    max-width: 97vw;
+    width: 65vh;
     background-color: var(--background);
     border-radius: var(--kbfontsize);
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.17);
@@ -44,7 +42,9 @@ animation-fill-mode: forwards;width: 100vw;}
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-/* animation: endscreenFadeIn .66s; */animation-fill-mode: forwards;}
+    /* animation: endscreenFadeIn .66s; */
+    animation-fill-mode: forwards;
+}
 
 #columnContainer {
     flex-direction: row;
@@ -66,21 +66,26 @@ animation-fill-mode: forwards;width: 100vw;}
     height: calc(var(--kbfontsize)*1.8);
     width: 100%;
     display: flex;
-align-content: center;align-items: center;justify-content: center;}
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
 
 #columnGraphContainer {
-    
+
     color: var(--white);
     width: 10%;
     flex-direction: column;
     gap: 2%;
     justify-content: center;
     flex-grow: 19;
-padding-right: 5.55%;}
+    padding-right: 5.55%;
+}
 
 .columnGraph {
-    flex-direction: row;align-items: center;
-    height: calc(var(--kbfontsize)*1.8)   ;
+    flex-direction: row;
+    align-items: center;
+    height: calc(var(--kbfontsize)*1.8);
     width: 100%;
 }
 
@@ -88,64 +93,162 @@ padding-right: 5.55%;}
     height: 100%;
     width: 50%;
     background-color: var(--green);
-    min-width: calc(var(--kbfontsize)*1.8) ;
-/* padding-right: 1%; */flex-direction: row;justify-content: flex-end;align-items: center;}
+    min-width: calc(var(--kbfontsize)*1.8);
+    /* padding-right: 1%; */
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
 
-.columnGraph>div>div{
+.columnGraph>div>div {
     flex-direction: column;
+    height: 0;
+    width: 0;
     justify-content: center;
     align-items: center;
-min-width: fit-content;width: calc(var(--kbfontsize)*1.8);}
-.columnGraph>div>div>div{
+    min-width: fit-content;
+    width: calc(var(--kbfontsize)*1.8);
+}
+
+.columnGraph>div>div>div {
     width: calc(var(--kbfontsize)*1.8);
     text-align: center;
 }
 
 
 
-#streakContainer{
+#streakContainer {
     width: calc(var(--kbfontsize)*24);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-/* flex-grow: 1; */height: calc(var(--kbfontsize)*8);}
+    /* flex-grow: 1; */
+    height: calc(var(--kbfontsize)*8);
+}
 
-#streakContainer>div{
+#streakContainer>div {
     width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-#streakContainer>div>div{
+
+#streakContainer>div>div {
     width: 25%;
     flex-direction: column;
-    justify-content: center;align-items: center;}
+    justify-content: center;
+    align-items: center;
+}
 
-#streakSubtitleContainer{
+#streakSubtitleContainer {
     font-size: var(--kbfontsize);
 }
-#streakNumberContainer{
-    font-size: calc(var(--kbfontsize)*2.5);
-font-weight: 500;}
 
-#countdownContainer{
+#streakNumberContainer {
+    font-size: calc(var(--kbfontsize)*2.5);
+    font-weight: 500;
+}
+
+#countdownContainer {
     flex-grow: 1;
 }
 
-.statTitle{
+.statTitle {
     font-size: calc(var(--kbfontsize)*1.4);
     font-weight: 550;
     margin-bottom: 2%;
 }
 
-#endscreenExitButton{
+#endscreenExitButton {
     margin: calc(var(--kbfontsize)*1);
     height: fit-content;
     background-color: browns;
-width: 92%;font-size: calc(var(--kbfontsize)*2.2);align-items: end;justify-content: end;flex-direction: row;/* color: var(--darkcell); */}
-#endscreenExitButton>div{
+    margin-bottom: 0;width: 92%;
+    font-size: calc(var(--kbfontsize)*2.2);
+    align-items: end;
+    justify-content: end;
+    flex-direction: row;
+    /* color: var(--darkcell); */
+}
+
+#endscreenExitButton>div {
     padding: calc(var(--kbfontsize)/3);
     transform: scaleY(0.9);
-    
+
     cursor: pointer;
+}
+
+#backgroundExit {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    pointer-events: inherit;
+    z-index: 1;
+}
+
+
+#countdownContainer {
+    width: 100%;
+    font-size: calc(var(--kbfontsize)/0.8);
+    margin: 2vh;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    /* gap: 8%; */
+margin-bottom: 5vh;}
+
+#countdownContainer>div {}
+
+#coundownContainerSpacer {
+    width: 0.1%;
+    height: 90%;
+    background-color: var(--text);
+}
+
+#countdownBox {
+    flex-grow: 1;
+    width: 45%;
+    height: 100%;
+}
+
+#ordbokBox {
+    
+    flex-grow: 1;
+    width: 45%;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ordbokBox>div {
+    
+    user-select: none;
+    cursor: var(--ordbokpointer);
+    color: var(--white);
+    font-weight: 500;
+    height: fit-content;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border: 1vh solid var(--ordbøkenerød);
+    border-radius: calc(var(--kbfontsize)/3);
+    background-color: var(--ordbøkenerød);
+    font-family: InriaSerif-Regular;
+    width: calc(var(--kbfontsize)*10);
+    height: calc(var(--kbfontsize)*3);
+    overflow: hidden;
+}
+
+.ordbokLocked>div {
+    filter:grayscale(80%);
+}
+
+:root .ordbokLocked{
+    --ordbokpointer: not-allowed;
+    --white: rgb(255, 122, 122);
 }

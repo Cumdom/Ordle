@@ -1,4 +1,4 @@
-let currentDay = Math.floor(Date.now()/(1000*60*60*24)) - 19087;
+let currentDay = Math.floor(Date.now()/(1000*60*60*24)) - 19087+2;
 let alphabet = [
     'q','w','e','r','t','y','u','i','o','p','å','a','s','d','f','g','h','j','k','l','ø','æ','z','x','c','v','b','n','m'
 ]
@@ -193,11 +193,12 @@ gameHandler.bootGame = _=>{
     window.addEventListener('keydown',gameHandler.editRow)
     gameHandler.newRow()
     keyboard.addKeyboardEventlistener()
-    ordbøkeneLinker()
 }
 
 gameHandler.endGame = _=>{
+    if(gameData.scores[6]){
     gameData.scores[9]++
+    }
     if(gameData.gameOver){
         gameHandler.wonGame()
     } else{
@@ -214,12 +215,12 @@ gameHandler.wonGame = _=>{
         }
     }
     cookie.setScores()
-    console.log(gameData.scores)
-
-    console.log('won')
+    endHandler.ordbøkeneLinker()
+    endHandler.init()
     endHandler.popUp()
 }
 gameHandler.lostGame = _=>{
-    console.log('lost')
+    endHandler.ordbøkeneLinker()
+    endHandler.init()
     endHandler.popUp()
 }

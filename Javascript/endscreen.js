@@ -21,7 +21,7 @@ statHandler.fetchGraphScores = _=>{
 }
 
 statHandler.drawScoreGraph = _=>{
-    var scores = graph.fetchGraphScores();
+    var scores = statHandler.fetchGraphScores();
     var graphParent = document.getElementById("columnGraphContainer");
     var graphChildren = [...graphParent.children]
     for(i=0;i<graphChildren.length;i++){
@@ -48,11 +48,12 @@ statHandler.writeStreakStats = _=>{
     var stats = statHandler.fetchStreakStats();
     var statBoxes = [...document.getElementById('streakNumberContainer').children]
     for(i=0;i<4;i++){
-        statBoxes[i].innerHTML = stats[i]
+        statBoxes[i].innerHTML = Math.round(stats[i]*10)/10
     }
 }
 
 endHandler.popUp = _=>{
+    // document.getElementById('ordbokBox').addEventListener('click',endHandler.ordbøkeneLinkinator)
     var container = document.getElementById('endscreenContainer');
     var box = document.getElementById('endscreenBox');
 
@@ -63,6 +64,7 @@ endHandler.popUp = _=>{
 }
 
 endHandler.popDown = _=>{
+    // document.getElementById('ordbokBox').removeEventListener('click',endHandler.ordbøkeneLinkinator)
     var container = document.getElementById('endscreenContainer');
     var box = document.getElementById('endscreenBox');
 
@@ -74,4 +76,18 @@ endHandler.popDown = _=>{
 
 endHandler.assignExitButton = _=>{
     [...document.getElementById('endscreenExitButton').children][0].addEventListener('click',endHandler.popDown)
+    document.getElementById('backgroundExit').addEventListener('click',endHandler.popDown)
+}
+
+endHandler.ordbøkeneLinker = _=>{
+    document.getElementById('ordbokBox').className='';
+    document.getElementById('ordbokBox').addEventListener('click',endHandler.ordbøkeneLinkinator)
+}
+endHandler.ordbøkeneLinkinator = _=>{
+    window.location.href ='https://ordbokene.no/bm,nn/search?q='+ordListe[currentDay]+'&scope=ei';
+}
+
+endHandler.init = _=>{
+    statHandler.writeStreakStats()
+    statHandler.drawScoreGraph()
 }
