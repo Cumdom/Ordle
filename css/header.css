@@ -49,11 +49,11 @@ justify-content: space-between;}
     height: 100%;
     width: 85%;
     display: flex;
-    gap: 0.33vh;
+    gap: 0.35vh;
 
 align-items: flex-end;}
 #menuRightIcon>div{
-    outline: 0.4vh solid black;
+    outline: 0.4vh solid var(--text);
     flex-grow: 1;
     /* border: 0.4vh solid var(--headerborder); */
 }

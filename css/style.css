@@ -64,9 +64,10 @@ div{
     
     --darkcell:     #464646;
     --cellborder:   #3f3f3f;
+    --cellborderfilled: #6a6a6e;
     --text: #ffffff;
-    --lit: #5b5b5f;
-    --unlit: #3e3e41;
+    --lit: #3b3b3f;
+    --unlit: #2e2e31;
     --headerborder: #3e3e41 ;
 
     
@@ -74,20 +75,20 @@ div{
 
 :root .norge {
     /* *   CELL COLOURS         */
-    --text:#00205B;
-    --green:        #00205B;
-    --yellow:       #FFFFFF;
-    --darkcell:     #BA0C2F;
+    --text:         #00205B;
+    --green:        #BA0C2F;
+    --yellow:       #00205B;
+    --darkcell:     #FFFFFF;
     --cellborder:   #bfbfbf;
-    --unlit:        #BA0C2F;
+    --unlit:        #FFFFFF;
     --headerborder:   #00205B;
 }
-:root .norge .letterCellPresence{
+:root .norge .letterCellWrong, .norge .incorrectLetter{
     --white: #00205B;
 }
 
-:root .norge .greenLetter, .incorrectLetter{
-    --text:#ffffff;
+:root .norge .yellowLetter, .norge .greenLetter {
+    --text:#FFFFFF;
 }
 
 
@@ -105,7 +106,10 @@ div{
     align-content: center;
     justify-content: flex-start;
     background-color: var(--background);
+color: var(--text);
+
 }
+
 
 html{
 overflow: hidden;

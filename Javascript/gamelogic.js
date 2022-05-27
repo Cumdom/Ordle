@@ -1,4 +1,4 @@
-let currentDay = Math.floor(Date.now()/(1000*60*60*24)) - 19087;
+let currentDay = Math.floor((Date.now()/(((1000*60)*60-15.5)*24) - 19087 +20/(3600*24)));
 let alphabet = [
     'q','w','e','r','t','y','u','i','o','p','å','a','s','d','f','g','h','j','k','l','ø','æ','z','x','c','v','b','n','m'
 ]
@@ -18,9 +18,35 @@ gameHandler.checkRow = _=>{
     if(letterIndex == 5){
         var word = "";
         for(i=0;i<5;i++){
-            // console.log(rowContainerArray, rowContainerArray[rowIndex], rowIndex)
             word += rowContainerArray[rowIndex][i];
         }
+        switch (word) {
+            case ('norge'):
+                document.getElementById('container').className='norge';
+            break;
+            case ('noreg'):
+                document.getElementById('container').className='norge';
+            break;
+            case ('black'):
+                document.getElementById('container').className='nightmode';
+            case ('night'):
+                document.getElementById('container').className='nightmode';
+            break;
+            case ('white'):
+                document.getElementById('container').className='';
+            case ('light'):
+                document.getElementById('container').className='';
+            break;
+            case ('lgbtq'):
+                setInterval(_=>{
+                    document.getElementById('container').style.filter='hue-rotate('+(Math.random()*360-180)+'deg)';
+                },300)
+            break;
+
+
+        }
+        gameData.colormode = document.getElementById('container').className;
+        cookie.bakeState('colormode')
         return ordListe.includes(word)
     }
 }
@@ -56,10 +82,7 @@ gameHandler.addLetter = (letter)=>{
     }
 }
 
-//! heavely integrated with animator.flip[...],  
-
 gameHandler.commitRow = reconstructorPassthrough=>{
-    console.log('commitrow',gameHandler.checkRow())
     if(gameHandler.checkRow()){
         letterIndex = 0
         animator.flip(gameHandler.comparisonPalette(reconstructorPassthrough))

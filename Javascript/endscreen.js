@@ -91,3 +91,17 @@ endHandler.init = _=>{
     statHandler.writeStreakStats()
     statHandler.drawScoreGraph()
 }
+
+endHandler.writeTime = _=>{
+    var time = -(Date.now()/(((1000*60)*60-15.5)*24) - 19088 +20/(3600*24))*24 + currentDay*24;
+    var hours = Math.floor(time)
+    var minutes = Math.floor((time-hours)*60)
+    var seconds = Math.floor(((time-hours)*60-minutes)*60)
+    var timeString = hours + ':' + minutes + ':' + seconds;
+    document.getElementById('countdown').innerHTML=timeString;
+}
+
+
+endHandler.timer = _=>{
+    setInterval(endHandler.writeTime,500)
+}
