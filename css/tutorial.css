@@ -36,7 +36,7 @@
 #tutorialExitButton {}
 
 #tutorialExitButton {
-    margin-top: 1vh;
+    margin-top: 5vh;
     display: flex;
     height: 5vh;
     flex-shrink: 0;
@@ -78,7 +78,7 @@
 
 .tutorialSeparator {
     width: 100%;
-    height: 0.01vh;
+    height: 0.1vh;
     background-color: black;
     margin-top: calc(var(--kbfontsize) * (1/2));
     margin-bottom: calc(var(--kbfontsize) * (1/2));
