@@ -106,7 +106,7 @@ div{
     align-content: center;
     justify-content: flex-start;
     background-color: var(--background);
-color: var(--text);
+    color: var(--text);
 
 }
 

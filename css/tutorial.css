@@ -1,7 +1,9 @@
 #tutorialContainer {
     gap: 1vh;
     position: absolute;
-    width: 60%; /* width: inherit; */
+    min-width: 60vw;
+    width: 50vh; /* width: inherit; */
+    max-width: 95vw;
     height: inherit;
     /* padding-left: 20vw; */
     padding: 50%; /* padding-right: 20vw; */
@@ -29,6 +31,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #tutorialExitButton {}
