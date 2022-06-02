@@ -1,11 +1,11 @@
-let currentDay = Math.floor((Date.now()/(((1000*60)*60-15.5)*24) - 19087 +20/(3600*24)));
+let currentDay = Math.floor((Date.now()/(((1000*60)*60-15.5)*24) - 19145 +20/(3600*24)));
 let alphabet = [
     'q','w','e','r','t','y','u','i','o','p','å','a','s','d','f','g','h','j','k','l','ø','æ','z','x','c','v','b','n','m'
 ]
 let blankCache;
 
 //* resettables
-let dailyWord = [...ordListe[currentDay]];
+let dailyWord = [...ordListe[ordListeIndex[currentDay%ordListeIndex.length]]];
 let rowContainerArray = [];
 let letterIndex = 0;
 let rowIndex = 0;

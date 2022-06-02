@@ -41,6 +41,12 @@ statHandler.fetchStreakStats = _=>{
     stats[1] = (stats[1]/stats[0])*100;
     stats[2] = gameData.scores[7]
     stats[3] = gameData.scores[8]
+    if(stats[0]==0){
+        stats[1]= '---'
+    }else{
+        stats[1]=Math.floor(stats[1]*10)/10
+    }
+    console.log(stats[1],stats[1]!=Number)
     return stats
 }
 
@@ -48,7 +54,11 @@ statHandler.writeStreakStats = _=>{
     var stats = statHandler.fetchStreakStats();
     var statBoxes = [...document.getElementById('streakNumberContainer').children]
     for(i=0;i<4;i++){
-        statBoxes[i].innerHTML = Math.floor(stats[i]*10)/10
+        if(stats[i]!=stats[1]){
+            statBoxes[i].innerHTML = Math.floor(stats[i]*10)/10
+        }else{
+            statBoxes[i].innerHTML = stats[i]
+        }
     }
 }
 
@@ -56,6 +66,7 @@ endHandler.popUp = (divIdentity)=>{
     // document.getElementById('ordbokBox').addEventListener('click',endHandler.ordbøkeneLinkinator)
     var container = document.getElementById(divIdentity + 'Container');
     var box = document.getElementById(divIdentity + 'Box');
+    console.log(box,container,divIdentity)
     container.style.animation = 'endscreenFadeIn '+0.66+'s';
     container.style.animationFillMode = 'forwards';
     box.style.animation       = 'endscreenBoxFadeIn '+0.66+'s';
@@ -66,7 +77,8 @@ endHandler.popDown = (divIdentity)=>{
     // document.getElementById('ordbokBox').removeEventListener('click',endHandler.ordbøkeneLinkinator)
     var container = document.getElementById(divIdentity + 'Container');
     var box = document.getElementById(divIdentity + 'Box');
-
+    
+    console.log(box,container,divIdentity)
     container.style.animation = 'endscreenFadeOut '+0.66+'s';
     container.style.animationFillMode = 'forwards';
     box.style.animation       = 'endscreenBoxFadeOut '+0.66+'s';
@@ -92,7 +104,7 @@ endHandler.init = _=>{
 }
 
 endHandler.writeTime = _=>{
-    var time = -(Date.now()/(((1000*60)*60-15.5)*24) - 19088 +20/(3600*24))*24 + currentDay*24;
+    var time = -(Date.now()/(((1000*60)*60-15.5)*24) - 19146 +20/(3600*24))*24 + currentDay*24;
     var hours = Math.floor(time)
     var minutes = Math.floor((time-hours)*60)
     var seconds = Math.floor(((time-hours)*60-minutes)*60)

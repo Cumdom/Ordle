@@ -1,42 +1,47 @@
-#header{
-    color:var(--text);
+#header {
+    color: var(--text);
     display: flex;
-    border-bottom: 1px solid var(--headerborder);
+    border-bottom: 0.1vh solid var(--headerborder);
     height: 7%;
     width: 100%;
     align-items: center;
-    
-    user-select: none;
-justify-content: space-between;}
 
-#gameLogo{
+    user-select: none;
+    justify-content: space-between;
+}
+
+#gameLogo {
     font-family: KarnakPro-CondesedBlack, Arial, Helvetica, sans-serif;
-    font-size: calc(var(--kbfontsize)*2.8);
+    font-size: calc(var(--kbfontsize) * 2.8);
     /* flex-grow: 1; */
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-#menuLeft{
-    padding: 5vh;height: 100%;
-    width: 10px;
+#menuLeft {
+    padding: 5vh;
+    height: 100%;
+    width: 1vh;
     /* background-color: blue; */
-    
+
     /* padding-top: 2.8vh; */
     flex-direction: row;
     justify-content: space-between;
     align-content: flex-start;
     align-items: center;
-/* flex-grow: 1; */}
+    /* flex-grow: 1; */
+}
 
-#menuRight{
-    display: flex;padding: 5vh;height: 100%;
-    width: 10px;
+#menuRight {
+    display: flex;
+    padding: 5vh;
+    height: 100%;
+    width: 1vh;
     /* background-color: blue; */
     /* flex-grow: 1; */
     flex-direction: row-reverse;
@@ -45,47 +50,58 @@ justify-content: space-between;}
     align-items: center;
 }
 
-#menuRightButton,#menuLeftButton{
-    display: flex;cursor: pointer;
+#menuRightButton,
+#menuLeftButton {
+    display: flex;
+    cursor: pointer;
     height: 100%;
     width: 4vh;
-align-content: center;align-items: center;}
+    align-content: center;
+    align-items: center;
+}
 
 
-#menuLeftIcon{
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
+#menuLeftIcon {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: inherit;
     height: 4vh;
-    
-    border: 0.4vh solid var(--text);
-    border-radius: 100vh;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: calc(var(--kbfontsize)*1.7);
-    color: var(--text);
-/* align-items: center; */font-weight: 500;text-align: center;}
 
-#menuRightIcon{
+    border: 0.35vh solid var(--text);
+    border-radius: 100vh;
+    font-family: sans-serif;
+    font-size: calc(var(--kbfontsize) * 2.1);
+    color: var(--text);
+    /* align-items: center; */
+    font-weight: 500;
+    text-align: center;
+    line-height: 100%;
+}
+
+#menuRightIcon {
     position: relative;
     height: 100%;
     width: 85%;
     display: flex;
-    gap: 0.35vh;
+    gap: 0.4vh;
 
-align-items: flex-end;}
-#menuRightIcon>div{
+    align-items: flex-end;
+}
+#menuRightIcon > div {
     outline: 0.4vh solid var(--text);
     flex-grow: 1;
     /* border: 0.4vh solid var(--headerborder); */
 }
-#menuRightIcon>div:nth-child(1){
+#menuRightIcon>div:nth-child(1) {
     height: 60%;
 }
-#menuRightIcon>div:nth-child(2){
+#menuRightIcon>div:nth-child(2) {
     height: 90%;
 }
-#menuRightIcon>div:nth-child(3){
+#menuRightIcon>div:nth-child(3) {
     height: 40%;
 }
-#menuRightIcon {height: 60%;}
+#menuRightIcon {
+    height: 60%;
+}

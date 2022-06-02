@@ -1,9 +1,9 @@
 .wordContainer {
     display: flex;
-    height: 43.75%;
+    height: 43.761%;
     width: 79.94%;
     /* width: fit-content; */max-width: 96vw;
-    flex-direction: column;
+    max-height: 71.6vw;flex-direction: column;
     padding-bottom: 3%;
     gap: 4%;
     /* margin-bottom: 30%; */

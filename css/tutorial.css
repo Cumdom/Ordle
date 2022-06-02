@@ -1,15 +1,23 @@
-#tutorialContainer{
+#tutorialContainer {
+    gap: 1vh;
     position: absolute;
-    width: inherit;
+    width: 60%; /* width: inherit; */
     height: inherit;
+    /* padding-left: 20vw; */
+    padding: 50vw; /* padding-right: 20vw; */
     z-index: 2;
     background-color: var(--background);
     opacity: 0;
     pointer-events: none;
 
-    outline: 1px solid var(--text);
+    /* outline: 1px solid var(--text); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
 }
-#tutorialBox{
+#tutorialBox {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -17,10 +25,81 @@
     /* background-color: var(--background); */
     /* opacity: 0; */
     pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#tutorialExitButton{
+#tutorialExitButton {}
+
+#tutorialExitButton {
+    display: flex;
+    height: 5vh;
+    flex-shrink: 0;
+    margin: calc(var(--kbfontsize) * 0);
+    height: fit-content;
+    width: 100%;
+    font-size: calc(var(--kbfontsize) * 1.2);
+    align-items: end;
+    justify-content: end;
+    /* flex-direction: row-reverse; */
+    /* color: var(--darkcell); */
+}
+
+#tutorialExitButton > div:first-child {
+    font-size: calc(var(--kbfontsize) * 1);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 70vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-left: 10%;
+    width: 80%;
+}
+#tutorialExitButton > div:last-child {
+    display: flex;
+    padding: calc(var(--kbfontsize) / 3);
+    transform: scaleY(0.9);
+    cursor: pointer;
+    width: 10%;
+}
+
+
+.tutorialText {
+
+    width: 80%;
+}
+
+.tutorialSeparator {
+    width: 80%;
+    height: 0.01vh;
     background-color: black;
-    height: 10px;
-    width: 10px;
+    margin-top: calc(var(--kbfontsize) * (1/2));
+    margin-bottom: calc(var(--kbfontsize) * (1/2));
+}
+
+.tutorialExampleWord {
+    display: flex;
+
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 0.5vh;
+}
+.tutorialExampleWord > div {
+    margin-top: calc(var(--kbfontsize) * (1/2));
+    margin-bottom: calc(var(--kbfontsize) * (1/2));
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    border: calc(var(--kbfontsize)*(1/(8))) solid var(--cellborderfilled);
+    height: calc(var(--kbfontsize) * 1.5);
+    width: calc(var(--kbfontsize) * 1.5);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-size: calc(var(--kbfontsize) * 1);
 }

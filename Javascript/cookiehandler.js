@@ -97,6 +97,7 @@ cookie.onLoad = _=>{
     cookie.getScores()
     if(gameData.scores==undefined){
         gameData.scores = [0,0,0,0,0,0,false,0,0,0,''];
+        endHandler.popUp('tutorial');
     }
     if (gameData.gameOver[0] =='false'||gameData.gameOver[0]==false||gameData.gameOver==false){
         gameData.gameOver = false

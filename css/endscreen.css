@@ -180,10 +180,10 @@
 
 #backgroundExit {
     position: absolute;
-    height: 100vh;
+    /* pointer-events: none; */height: 100vh;
     width: 100vw;
     background-color: transparent;
-    pointer-events: inherit;
+    /* pointer-events: inherit; */
     z-index: 1;
 }
 

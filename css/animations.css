@@ -34,17 +34,23 @@
 @keyframes endscreenBoxFadeIn {
     0%  {
         transform: translateY(100vh);
+        pointer-events: none;
+        
     }
     100%{
         transform: translateY(0);
+        pointer-events: all;
+        
     }
 }
 
 @keyframes endscreenBoxFadeOut {
     0%{
         transform: translateY(0);
+        pointer-events: none;
     }
     100%  {
         transform: translateY(100vh);
+        pointer-events: all;
     }
 }

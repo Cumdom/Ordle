@@ -282,7 +282,50 @@
             </div>
             <div id="tutorialBox">
                 <div id="tutorialContainer">
-                    <div id="tutorialExitButton"></div>
+                    <div id="tutorialExitButton">
+                        <div><b>HVORDAN SPILLER MAN</b></div>
+                        <div>X</div>
+                    </div>
+                    <div class="tutorialText">
+                        Du har seks forsøk til å gjette dagens <b>ORDLE</b>. <br><br>
+                        Vært forsøk må være et gyldig ord på fem bokstaver. Trykk på <b>ENTER</b> knappen for å registrere ordet. <br><br>
+                        Etter vært forsøk, så vil fargen på firkantene endre seg basert hvor nærme forsøket ditt var til dagens ord.
+                    </div>
+                    <div class="tutorialSeparator"></div>
+                    <div class="tutorialText">
+                        <b>Eksempler</b>
+                        <div class="tutorialExampleWord">
+                            <div style="background-color:var(--green);border-color: var(--green);color: var(--white);">F</div>
+                            <div>A</div>
+                            <div>R</div>
+                            <div>G</div>
+                            <div>E</div>
+                        </div>
+                        Bokstaven <b>F</b> er på riktig plass.
+                        <div class="tutorialExampleWord">
+                            <div>P</div>
+                            <div style="background-color:var(--yellow);border-color: var(--yellow);color: var(--white);">L</div>
+                            <div>A</div>
+                            <div>S</div>
+                            <div>K</div>
+                        </div>
+                        Bokstaven <b>L</b> er i ordet, men er på feil plass.
+                        <div class="tutorialExampleWord">
+                            <div>H</div>
+                            <div>J</div>
+                            <div>O</div>
+                            <div style="background-color:var(--darkcell);border-color: var(--darkcell);color: var(--white);">R</div>
+                            <div>T</div>
+                        </div>
+                        Bokstaven <b>R</b> er ikke i ordet på noen plass.
+
+
+
+                    </div>
+                    <div class="tutorialSeparator"></div>
+                    <div class="tutorialText">
+                        <b>En ny ORDLE vil være tilgjengelig hver dag!</b>
+                    </div>
                 </div>
             </div>
         </div>
@@ -292,6 +335,7 @@
         <script src="./Javascript/scaling.js"></script>
         <script src="./Javascript/cookiehandler.js"></script>
         <script src="./Javascript/wordlist.js"></script>
+        <script src="./Javascript/wordlistfiltered.js"></script>
         <script src="./Javascript/gamelogic.js"></script>
         <script src="./Javascript/keyboard.js"></script>
         <script src="./Javascript/main.js"></script>
