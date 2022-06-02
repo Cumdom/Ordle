@@ -1,9 +1,8 @@
 #tutorialContainer {
     gap: 1vh;
     position: absolute;
-    min-width: 60vw;
-    width: 50vh; /* width: inherit; */
-    max-width: 95vw;
+    width: 40%;
+    max-width: 98vw;
     height: inherit;
     /* padding-left: 20vw; */
     padding: 50%; /* padding-right: 20vw; */
