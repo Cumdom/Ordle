@@ -5,7 +5,8 @@ let gameData = {
     registeredWords:[],
     registeredPalettes:[],
     keyboardPalettes:[[],[],[],],
-    scores:[0,0,0,0,0,0,false,0,0,0],
+    colormode:'',
+    scores:[0,0,0,0,0,0,false,0,0,0,''],
     //* scores: index 0-5 are the winning row scores
     //*         index 6 is used to determine if the player has won this page load or if the have refreshed.
     //*         index 7 is the current win streak length.
@@ -23,6 +24,7 @@ cookie.reconstructor = _=>{
     keyboard.grayLetters    =   gameData.keyboardPalettes[0];
     keyboard.yellowLetter   =   gameData.keyboardPalettes[1];
     keyboard.greenLetters   =   gameData.keyboardPalettes[2];
+    document.getElementById('container').className = gameData.colormode;
     // keyboard.painter()
     rowContainerArray = gameData.registeredWords;
     for(i=0;i<gameData.registeredWords.length;i++){
@@ -65,6 +67,7 @@ cookie.storeStates = _=>{
     cookie.bakeState('gameOver')
     cookie.bakeState('registeredWords')
     cookie.bakeState('registeredPalettes')
+    cookie.bakeState('colormode')
     localStorage.setItem('keyboardGray',gameData.keyboardPalettes[0])
     localStorage.setItem('keyboardYellow',gameData.keyboardPalettes[1])
     localStorage.setItem('keyboardGreen',gameData.keyboardPalettes[2])
@@ -90,9 +93,10 @@ cookie.splitArray = (array)=>{
 
 cookie.onLoad = _=>{
     cookie.fetchState('dicks','gameOver')
+    cookie.fetchState('colormode')
     cookie.getScores()
     if(gameData.scores==undefined){
-        gameData.scores = [0,0,0,0,0,0,false,0,0,0];
+        gameData.scores = [0,0,0,0,0,0,false,0,0,0,''];
     }
     if (gameData.gameOver[0] =='false'||gameData.gameOver[0]==false||gameData.gameOver==false){
         gameData.gameOver = false
