@@ -19,8 +19,8 @@
 }
 #tutorialBox {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: var(--containersize);
+    height: 100%;
     z-index: 2;
     /* background-color: var(--background); */
     /* opacity: 0; */
