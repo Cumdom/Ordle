@@ -72,11 +72,11 @@
 
 .tutorialText {
 
-    width: 80%;
+    width: 100%;
 }
 
 .tutorialSeparator {
-    width: 80%;
+    width: 100%;
     height: 0.01vh;
     background-color: black;
     margin-top: calc(var(--kbfontsize) * (1/2));
