@@ -4,7 +4,7 @@
     width: 60%; /* width: inherit; */
     height: inherit;
     /* padding-left: 20vw; */
-    padding: 50vw; /* padding-right: 20vw; */
+    padding: 50%; /* padding-right: 20vw; */
     z-index: 2;
     background-color: var(--background);
     opacity: 0;
