@@ -217,10 +217,10 @@ gameHandler.wonGame = _=>{
     cookie.setScores()
     endHandler.ordbøkeneLinker()
     endHandler.init()
-    endHandler.popUp()
+    endHandler.popUp('endscreen')
 }
 gameHandler.lostGame = _=>{
     endHandler.ordbøkeneLinker()
     endHandler.init()
-    endHandler.popUp()
+    endHandler.popUp('endscreen')
 }

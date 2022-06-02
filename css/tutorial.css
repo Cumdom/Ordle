@@ -1,0 +1,26 @@
+#tutorialContainer{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    z-index: 2;
+    background-color: var(--background);
+    opacity: 0;
+    pointer-events: none;
+
+    outline: 1px solid var(--text);
+}
+#tutorialBox{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    /* background-color: var(--background); */
+    /* opacity: 0; */
+    pointer-events: none;
+}
+
+#tutorialExitButton{
+    background-color: black;
+    height: 10px;
+    width: 10px;
+}

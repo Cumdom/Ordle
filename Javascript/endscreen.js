@@ -52,21 +52,20 @@ statHandler.writeStreakStats = _=>{
     }
 }
 
-endHandler.popUp = _=>{
+endHandler.popUp = (divIdentity)=>{
     // document.getElementById('ordbokBox').addEventListener('click',endHandler.ordbøkeneLinkinator)
-    var container = document.getElementById('endscreenContainer');
-    var box = document.getElementById('endscreenBox');
-
+    var container = document.getElementById(divIdentity + 'Container');
+    var box = document.getElementById(divIdentity + 'Box');
     container.style.animation = 'endscreenFadeIn '+0.66+'s';
     container.style.animationFillMode = 'forwards';
     box.style.animation       = 'endscreenBoxFadeIn '+0.66+'s';
     box.style.animationFillMode = 'forwards';
 }
 
-endHandler.popDown = _=>{
+endHandler.popDown = (divIdentity)=>{
     // document.getElementById('ordbokBox').removeEventListener('click',endHandler.ordbøkeneLinkinator)
-    var container = document.getElementById('endscreenContainer');
-    var box = document.getElementById('endscreenBox');
+    var container = document.getElementById(divIdentity + 'Container');
+    var box = document.getElementById(divIdentity + 'Box');
 
     container.style.animation = 'endscreenFadeOut '+0.66+'s';
     container.style.animationFillMode = 'forwards';
@@ -75,13 +74,13 @@ endHandler.popDown = _=>{
 }
 
 endHandler.assignExitButton = _=>{
-    [...document.getElementById('endscreenExitButton').children][0].addEventListener('click',endHandler.popDown)
-    document.getElementById('backgroundExit').addEventListener('click',endHandler.popDown)
+    [...document.getElementById('endscreenExitButton').children][0].addEventListener('click',_=>endHandler.popDown('endscreen'))
+    document.getElementById('backgroundExit').addEventListener('click',_=>endHandler.popDown('endscreen'))
 }
 
 endHandler.ordbøkeneLinker = _=>{
     document.getElementById('ordbokBox').className='';
-    document.getElementById('ordbokBox').addEventListener('click',endHandler.ordbøkeneLinkinator)
+    [...document.getElementById('ordbokBox').children][0].addEventListener('click',endHandler.ordbøkeneLinkinator)
 }
 endHandler.ordbøkeneLinkinator = _=>{
     window.open('https://ordbokene.no/bm,nn/search?q='+ordListe[currentDay]+'&scope=ei', '_blank');

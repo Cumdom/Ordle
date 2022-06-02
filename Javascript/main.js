@@ -1,7 +1,7 @@
 function yggdrasil(){
     gameHandler.bootGame()
     viewScaling.handler()
-    headerInit()
+    header.init()
     cookie.onLoad()
     endHandler.init()
     endHandler.assignExitButton()
