@@ -95,7 +95,7 @@ endHandler.ordbøkeneLinker = _=>{
     [...document.getElementById('ordbokBox').children][0].addEventListener('click',endHandler.ordbøkeneLinkinator)
 }
 endHandler.ordbøkeneLinkinator = _=>{
-    window.open('https://ordbokene.no/bm,nn/search?q='+ordListe[currentDay]+'&scope=ei', '_blank');
+    window.open('https://ordbokene.no/bm,nn/search?q='+ordListe[ordListeIndex[currentDay]]+'&scope=ei', '_blank');
 }
 
 endHandler.init = _=>{
