@@ -108,9 +108,19 @@ endHandler.writeTime = _=>{
     var hours = Math.floor(time)
     var minutes = Math.floor((time-hours)*60)
     var seconds = Math.floor(((time-hours)*60-minutes)*60)
+    hours = endHandler.digitalClockinator(hours);
+    minutes = endHandler.digitalClockinator(minutes);
+    seconds = endHandler.digitalClockinator(seconds);
     var timeString = hours + ':' + minutes + ':' + seconds;
     document.getElementById('countdown').innerHTML=timeString;
 }
+endHandler.digitalClockinator = digit=>{
+    if(digit<10){
+        digit = '0'+digit;
+    }
+    return digit
+}
+
 
 
 endHandler.timer = _=>{
